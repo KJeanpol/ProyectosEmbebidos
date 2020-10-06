@@ -18,7 +18,8 @@ import { FormsModule } from "@angular/forms";
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   hostname: 'test.mosquitto.org',
   port: 8080,
-  path: '/CoreElectronics'
+  protocol: 'ws',
+  path: '/mqtt'
 }
 
 

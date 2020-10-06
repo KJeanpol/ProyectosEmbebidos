@@ -47,3 +47,4 @@ export class AppComponent implements OnInit, OnDestroy {
     this.msglog.nativeElement.innerHTML = '';
   }
 }
+
