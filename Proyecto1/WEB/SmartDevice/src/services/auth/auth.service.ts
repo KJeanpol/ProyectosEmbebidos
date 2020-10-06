@@ -50,13 +50,12 @@ export class AuthService extends RoleValidator {
     return (await this.afAuth.currentUser).sendEmailVerification();
   }
 
-  async login(email: string, password: string): Promise<User> {
+  async login(email: string, password: string){
     try {
-      const { user } = await this.afAuth.signInWithEmailAndPassword(
+      const  user = await this.afAuth.signInWithEmailAndPassword(
         email,
         password
       );
-      this.updateUserData(user);
       return user;
     } catch (error) {
       console.log(error);

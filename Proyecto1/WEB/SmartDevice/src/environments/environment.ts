@@ -14,6 +14,15 @@ export const environment = {
     appId: "1:1067243925686:web:f4147cef64ac4b39567617",
     measurementId: "G-34R5SXK69Z"
   },
+	hmr: false,
+	http: {
+		apiUrl: '<https://api.myweb.com>',
+	},
+	mqtt: {
+		server: 'mqtt.myweb.com',
+		protocol: "wss",
+		port: 1883
+	},
 };
 
 /*

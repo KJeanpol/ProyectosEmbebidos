@@ -26,12 +26,30 @@ export class LoginComponent {
     }
   }
 
+  async email() {
+    const { email, password } = this.loginForm.value;
+    try {
+      const user = await this.authSvc.login(email, password);
+      if (user) {
+        this.router.navigate(['/pages/home']);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   async onLogin() {
     const { email, password } = this.loginForm.value;
     try {
       const user = await this.authSvc.login(email, password);
       if (user) {
-        this.checkUserIsVerified(user);
+        this.router.navigate(['/pages/home']);
+      }
+      else{
+        const user = await this.authSvc.loginGoogle();
+        if (user) {
+          this.router.navigate(['/pages/home']);
+        }
       }
     } catch (error) {
       console.log(error);
@@ -40,10 +58,13 @@ export class LoginComponent {
 
   private checkUserIsVerified(user: User) {
     if (user && user.emailVerified) {
-      this.router.navigate(['/home']);
+      console.log("Entre")
+      this.router.navigate(['/pages/home']);
     } else if (user) {
+      console.log("Entre1")
       this.router.navigate(['/verification-email']);
     } else {
+      console.log("Entre2")
       this.router.navigate(['/register']);
     }
   }
