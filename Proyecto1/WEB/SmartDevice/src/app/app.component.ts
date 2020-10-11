@@ -2,6 +2,7 @@
 import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { IMqttMessage, MqttService } from 'ngx-mqtt';
+import { WebSocketService } from "../services/sockets/web-socket.service";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit, OnDestroy {
   isConnected: boolean = false;
   @ViewChild('msglog', { static: true }) msglog: ElementRef;
 
-  constructor(private _mqttService: MqttService) { }
+  constructor(private _mqttService: MqttService, private socket:WebSocketService ) { }
 
   ngOnInit(): void {}
 
@@ -34,9 +35,11 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   sendmsg(): void {
+
+    this.socket.emit("news","PRUEBAAA");
     // use unsafe publish for non-ssl websockets
-    this._mqttService.unsafePublish(this.topicname, this.msg, { qos: 1, retain: true })
-    this.msg = ''
+    //this._mqttService.unsafePublish(this.topicname, this.msg, { qos: 1, retain: true })
+    //this.msg = ''
   }
   
   logMsg(message): void {
