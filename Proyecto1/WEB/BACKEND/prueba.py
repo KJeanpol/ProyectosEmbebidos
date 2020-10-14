@@ -4,7 +4,8 @@
  
 import paho.mqtt.client as mqtt
 import ctypes
- MQTT_SERVER = "test.mosquitto.org"
+ 
+ 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
@@ -17,33 +18,28 @@ def on_connect(client, userdata, flags, rc):
  
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
+    gpio = ctypes.CDLL('./gpio.so')
     print(msg.topic)
-    prueba=msg.payload.decode('utf-8')
+    value=msg.payload.decode('utf-8')
 
     if (msg.topic=="House/on"):
-        print("Received message #1adasd, do something")
-        
-    if prueba == "Hello":
-        print("Received message #1, do something")
-        # Do something
+        print("Received message #6565, do something else")
+        gpio.factorial.argtypes = (ctypes.c_int,ctypes.c_int,)
+        gpio.factorial(value)
+
+    if (msg.topic=="House/off"):
+        gpio.factorial.argtypes = (ctypes.c_int,ctypes.c_int,)
+        gpio.factorial(value)
 
 
-    if prueba == "World!":
+    if (msg.topic=="House/door"):
+        gpio.factorial.argtypes = (ctypes.c_int,ctypes.c_int,)
+        gpio.factorial(value)
+
+    if value == "World!":
         print("Received message #2, do something else")
         # Do something else
-
-    if prueba == "photo":
-        print("Sending photo ")
-        publish.single("House/off", on_image(), hostname=MQTT_SERVER) 
  
-
-def on_image():
-    f=open("image.jpg", "rb") #3.7kiB in same folder
-    fileContent = f.read()
-    byteArr = bytearray(fileContent)
-    print(byteArr)
-    return byteArr
-
 # Create an MQTT client and attach our routines to it.
 client = mqtt.Client()
 client.on_connect = on_connect
