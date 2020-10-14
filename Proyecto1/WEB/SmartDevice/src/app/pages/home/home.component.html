@@ -1,18 +1,24 @@
-<button mat-raised-button (click)="subscribe()">SUBSCRIBE TO FOOBAR TOPIC</button>
-<button mat-raised-button (click)="sendMsg()">SEND FOOBAR MESSAGE</button>
-<button mat-raised-button (click)="unsubscribe()">UNSUBSCRIBE FROM FOOBAR TOPIC</button>
-
-<div fxLayout>
-    <div fxFlex="20">
-        <h1>Messages:</h1>
-        <p *ngFor="let message of messages">
-            {{message | json}}
-        </p>
-    </div>
-    <div>
-        <h1>Status info:</h1>
-        <p *ngFor="let statusMessage of status">
-            {{statusMessage}}
-        </p>
-    </div>
+<table>
+    <tr>
+        <td>Topic: </td>
+        <td><input [(ngModel)]="topicname" type="text" /></td>
+        <td><button type="button" (click)="subscribeNewTopic()">Subscribe Topic</button></td>
+    </tr>
+    <tr>
+        <td>Message: </td>
+        <td><input [(ngModel)]="msg" type="text" /></td>
+        <td><button type="button" (click)="sendmsg()">Send</button></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="clear()">Clear Log</button></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="on1()">Clear Log</button></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="on1()">Clear Log</button></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="on1()">Clear Log</button></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="on4()">Clear Log</button></td>
+        <td></td>
+    </tr>
+</table>
+<br /><br />
+<div #msglog>
 </div>

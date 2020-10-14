@@ -1,7 +1,9 @@
-import {Component, OnDestroy} from '@angular/core';
-import {ConnectionStatus, MqttService, SubscriptionGrant} from '../../ngx-mqtt-client';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
+import {ConnectionStatus,SubscriptionGrant} from '../../ngx-mqtt-client';
 import {IClientOptions} from 'mqtt';
-
+import { Subscription } from 'rxjs';
+import { WebSocketService } from '../../../services/sockets/web-socket.service';
+import { IMqttMessage, MqttService } from 'ngx-mqtt';
 export interface Foo {
     bar: string;
 }
@@ -11,88 +13,89 @@ export interface Foo {
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnDestroy {
-
-    messages: Array<Foo> = [];
-
-    status: Array<string> = [];
-
-    constructor(private _mqttService: MqttService) {
-
-        /**
-         * Tracks connection status.
-         */
-        this._mqttService.status().subscribe((s: ConnectionStatus) => {
-            const status = s === ConnectionStatus.CONNECTED ? 'CONNECTED' : 'DISCONNECTED';
-            this.status.push(`Mqtt client connection status: ${status}`);
-        });
-    }
-
-    /**
-     * Manages connection manually.
-     * If there is an active connection this will forcefully disconnect that first.
-     * @param {IClientOptions} config
-     */
-    connect(config: IClientOptions): void {
-        this._mqttService.connect(config);
-    }
-
-    /**
-     * Subscribes to fooBar topic.
-     * The first emitted value will be a {@see SubscriptionGrant} to confirm your subscription was successful.
-     * After that the subscription will only emit new value if someone publishes into the fooBar topic.
-     * */
-    subscribe(): void {
-        this._mqttService.subscribeTo<Foo>('test')
-            .subscribe({
-                next: (msg: SubscriptionGrant | Foo) => {
-                    if (msg instanceof SubscriptionGrant) {
-                        this.status.push('Subscribed to fooBar topic!');
-                    } else {
-                        this.messages.push(msg);
-                    }
-                },
-                error: (error: Error) => {
-                    this.status.push(`Something went wrong: ${error.message}`);
-                }
-            });
-    }
-
-
-    /**
-     * Sends message to fooBar topic.
-     */
-    sendMsg(): void {
-        this._mqttService.publishTo<Foo>('test', {bar: 'test'}).subscribe({
-            next: () => {
-                this.status.push('Message sent to fooBar topic');
-            },
-            error: (error: Error) => {
-                this.status.push(`Something went wrong: ${error.message}`);
-            }
-        });
-    }
-
-    /**
-     * Unsubscribe from fooBar topic.
-     */
-    unsubscribe(): void {
-        this._mqttService.unsubscribeFrom('test').subscribe({
-            next: () => {
-                this.status.push('Unsubscribe from fooBar topic');
-            },
-            error: (error: Error) => {
-                this.status.push(`Something went wrong: ${error.message}`);
-            }
-        });
-    }
-
-    /**
-     * The purpose of this is, when the user leave the app we should cleanup our subscriptions
-     * and close the connection with the broker
-     */
+export class HomeComponent implements OnInit, OnDestroy {
+    private subscription: Subscription;
+    topicname: any;
+    on:any="House/on";
+    off:any="House/off";
+    door:any="House/door";
+    msg: any;
+    isConnected: boolean = false;
+    @ViewChild('msglog', { static: true }) msglog: ElementRef;
+  
+    constructor(private _mqttService: MqttService, private socket:WebSocketService ) { }
+  
+    ngOnInit(): void {}
+  
     ngOnDestroy(): void {
-        this._mqttService.end();
+      this.subscription.unsubscribe();
     }
+  
+  
+    subscribeNewTopic(): void {
+      console.log('inside subscribe new topic')
+      this.subscription = this._mqttService.observe(this.topicname).subscribe((message: IMqttMessage) => {
+        this.msg = message;
+        console.log('msg: ', message)
+        this.logMsg('Message: ' + message.payload.toString() + '<br> for topic: ' + message.topic);
+      });
+      this.logMsg('subscribed to topic: ' + this.topicname)
+    }
+  
+    sendmsg(): void {
+  
+      //this.socket.emit("news","PRUEBAAA");
+      //use unsafe publish for non-ssl websockets
+      this._mqttService.unsafePublish(this.topicname, this.msg, { qos: 1, retain: true })
+      this.msg = ''
+    }
+    on1(): void {
+  
+        //this.socket.emit("news","PRUEBAAA");
+        //use unsafe publish for non-ssl websockets
+        this._mqttService.unsafePublish(this.on, "1", { qos: 1, retain: true })
+        this.msg = ''
+      }
+      on2(): void {
+  
+        //this.socket.emit("news","PRUEBAAA");
+        //use unsafe publish for non-ssl websockets
+        this._mqttService.unsafePublish(this.on, "1", { qos: 1, retain: true })
+        this.msg = ''
+      }
 
-}
+      on3(): void {
+  
+        //this.socket.emit("news","PRUEBAAA");
+        //use unsafe publish for non-ssl websockets
+        this._mqttService.unsafePublish(this.on, "1", { qos: 1, retain: true })
+        this.msg = ''
+      }
+
+
+      on4(): void {
+  
+        //this.socket.emit("news","PRUEBAAA");
+        //use unsafe publish for non-ssl websockets
+        this._mqttService.unsafePublish(this.off, "photo", { qos: 1, retain: true })
+        this.msg = ''
+      }
+
+      on5(): void {
+  
+        //this.socket.emit("news","PRUEBAAA");
+        //use unsafe publish for non-ssl websockets
+        this._mqttService.unsafePublish(this.on, "1", { qos: 1, retain: true })
+        this.msg = ''
+      }
+    
+    logMsg(message): void {
+      this.msglog.nativeElement.innerHTML += '<br><hr>' + message;
+    }
+  
+    clear(): void {
+      this.msglog.nativeElement.innerHTML = '';
+    }
+  }
+  
+  
