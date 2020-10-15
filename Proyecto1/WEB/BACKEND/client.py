@@ -1,13 +1,8 @@
-# MQTT Client demo
-# Continuously monitor two different MQTT topics for data,
-# check if the received data matches two predefined 'commands'
- 
 import paho.mqtt.client as mqtt
 import paho.mqtt.publish as publish
 import ctypes
 import base64 
 
-MQTT_SERVER = "test.mosquitto.org"
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
@@ -16,35 +11,37 @@ def on_connect(client, userdata, flags, rc):
     # reconnect then subscriptions will be renewed.
     client.subscribe("House/on")
     client.subscribe("House/off")
-    client.subscribe("House/door")
+    client.subscribe("photo")
  
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
     print(msg.topic)
     prueba=msg.payload.decode('utf-8')
 
-    if (msg.topic=="House/on"):
-        print("Received message #1adasd, do something")
-        
-    if prueba == "Hello":
+
+    if prueba == "House/on":
         print("Received message #1, do something")
         # Do something
 
 
-    if prueba == "World!":
+    if prueba== "House/off":
+        publish.single("House/off", "World!", hostname="test.mosquitto.org")
         print("Received message #2, do something else")
         # Do something else
 
-    if prueba == "photo":
-        print("Sending photo ")
-        publish.single("House/off", on_image(), hostname=MQTT_SERVER) 
- 
-    
-def on_image():
-    with open("image.jpg", "rb") as image_file:
-        encoded = base64.b64encode(image_file.read())
-        return encoded
+    if prueba== "photo":
+        publish.single("photo",on_image(), hostname="test.mosquitto.org")
+        print("SALI DE FOTO")
+        # Do something else
 
+
+def on_image():
+    with open("1.jpg", "rb") as image_file:
+        encoded = base64.b64encode(image_file.read())
+        image_file.close()
+       # return "https://www.google.com/search?q=image&sxsrf=ALeKk039oD5igbmxMCXSAxOuUarquKm7jg:1602725481186&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiIvOnXubXsAhWpp1kKHR8CCUYQ_AUoAXoECBYQAw&biw=1848&bih=981#imgrc=RkjAFRQNR5bUxM"#encoded"
+        return encoded
+ 
 # Create an MQTT client and attach our routines to it.
 client = mqtt.Client()
 client.on_connect = on_connect

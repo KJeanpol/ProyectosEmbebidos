@@ -4,6 +4,10 @@ import {IClientOptions} from 'mqtt';
 import { Subscription } from 'rxjs';
 import { WebSocketService } from '../../../services/sockets/web-socket.service';
 import { IMqttMessage, MqttService } from 'ngx-mqtt';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
+
+
 export interface Foo {
     bar: string;
 }
@@ -20,11 +24,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     off:any="House/off";
     door:any="House/door";
     photo:any="photo";
+    imagePath : SafeResourceUrl;
     msg: any;
     isConnected: boolean = false;
     @ViewChild('msglog', { static: true }) msglog: ElementRef;
   
-    constructor(private _mqttService: MqttService, private socket:WebSocketService ) { }
+    constructor(private _mqttService: MqttService, private socket:WebSocketService,
+      private _sanitizer: DomSanitizer ) { }
   
     ngOnInit(): void {}
   
@@ -37,9 +43,32 @@ export class HomeComponent implements OnInit, OnDestroy {
       console.log('inside subscribe new topic')
       this.subscription = this._mqttService.observe(this.off).subscribe((message: IMqttMessage) => {
         this.msg = message;
-        console.log('msg: ', message)
-        // this.logMsg('Message: ' + message.payload.toString() + '<br> for topic: ' + message.topic);
+        console.log('msg: ', message.payload.toString())
+    //    this.logMsg('Message: ' + message.payload.toString() + '<br> for topic: ' + message.topic);
+      //  this.imagePath = this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' 
+         //        + this.msg.message.payload.toString().base64string);
       });
+
+      this.subscription = this._mqttService.observe(this.on).subscribe((message: IMqttMessage) => {
+        this.msg = message;
+        console.log('msg: ', message.payload.toString())
+     //   this.logMsg('Message: ' + message.payload.toString() + '<br> for topic: ' + message.topic);
+       // this.imagePath = this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' 
+           //      + this.msg.message.payload.toString().base64string);
+      });
+
+      this.subscription = this._mqttService.observe(this.photo).subscribe((message: IMqttMessage) => {
+        this.msg = message;
+        console.log('msg: ', message.payload.toString())
+       // this.logMsg('Message: ' + message.payload.toString() + '<br> for topic: ' + message.topic);
+        //this.imagePath=message.payload.toString()
+        this.imagePath = this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' 
+                 + this.msg.payload);
+
+                 
+      });
+
+
       this.logMsg('subscribed to topic: ' + this.topicname)
     }
   
@@ -54,7 +83,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   
         //this.socket.emit("news","PRUEBAAA");
         //use unsafe publish for non-ssl websockets
-        this._mqttService.unsafePublish(this.on, "1", { qos: 1, retain: true })
+        this._mqttService.unsafePublish(this.on, "House/off", { qos: 1, retain: true })
         this.msg = ''
       }
       on2(): void {
@@ -78,7 +107,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   
         //this.socket.emit("news","PRUEBAAA");
         //use unsafe publish for non-ssl websockets
-        this._mqttService.unsafePublish(this.off, "photo", { qos: 1, retain: true })
+        this._mqttService.unsafePublish(this.photo, "photo", { qos: 1, retain: true })
         this.msg = ''
       }
 
@@ -89,6 +118,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this._mqttService.unsafePublish(this.on, "1", { qos: 1, retain: true })
         this.msg = ''
       }
+    
     
     logMsg(message): void {
       this.msglog.nativeElement.innerHTML += '<br><hr>' + message;
