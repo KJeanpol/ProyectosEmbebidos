@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include <gpio.h>
+#include <gpio.h>
 
 #define IN  0
 #define OUT 1
@@ -32,27 +32,35 @@ int main(int argc, char const *argv[])
 	{
 		//Initialize system pins
 		case 0:
+			printf(" Initializing systems pins....\n");
 			init_lights_pins();
 			init_doors_pins();
+			printf(" Done.\n");
 			break;
 
 		//Turn on lights
 		case 1:
 			for (int i = MIN_ARGS - 1; i < argc; i++)
-				printf("Encender luz %i de la casa\n", atoi(argv[i]));
+			{
+				printf(" Encender luz %i de la casa (gpio %i).\n", atoi(argv[i]), lights[atoi(argv[i]) - 1]);
+				digitalWrite(lights[atoi(argv[i]) - 1], HIGH);
+			}
 
 			break;
 
 		//Turn off lights
 		case 2:
 			for (int i = MIN_ARGS - 1; i < argc; i++)
-				printf("Apagar luz %i de la casa\n", atoi(argv[i]));
+			{
+				printf(" Apagar luz %i de la casa (gpio %i).\n", atoi(argv[i]), lights[atoi(argv[i]) - 1]);
+				digitalWrite(lights[atoi(argv[i]) -1 ], LOW);
+			}
 
 			break;
 
 		//Read door status
 		case 3:
-			printf("Leer estado de la puerta %i\n", atoi(argv[2]));
+			printf(" Leer estado de la puerta %i : %i\n", atoi(argv[2]), digitalRead(doors[atoi(argv[2])]));
 			break;
 
 		default:
@@ -65,15 +73,11 @@ int main(int argc, char const *argv[])
 void init_lights_pins()
 {
 	for (int i = 0; i < LIGHTS_NUM; i++)
-	{
-		//pinMode(lights[i], OUT);
-	}
+		pinMode(lights[i], OUT);
 }
 
 void init_doors_pins()
 {
 	for (int i = 0; i < DOORS_NUM; i++)
-	{
-		//pinMode(doors[i], IN);
-	}
+		pinMode(doors[i], IN);
 }
