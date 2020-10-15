@@ -2,44 +2,63 @@ import paho.mqtt.client as mqtt
 import paho.mqtt.publish as publish
 import ctypes
 import base64 
+import os
 
-# The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
  
-    # Subscribing in on_connect() - if we lose the connection and
-    # reconnect then subscriptions will be renewed.
-    client.subscribe("House/on")
-    client.subscribe("House/off")
-    client.subscribe("photo")
+    # client.subscribe("House/on")
+    #client.subscribe("House/off")
+    #client.subscribe("photo")
  
-# The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
     print(msg.topic)
     prueba=msg.payload.decode('utf-8')
 
 
-    if prueba == "House/on":
-        print("Received message #1, do something")
-        # Do something
+    if prueba == "House/on1":
+        os.system("./house_control 1 1")
+
+    if prueba == "House/on2":
+        os.system("./house_control 1 2")
+
+    if prueba == "House/on3":
+        os.system("./house_control 1 3")
+
+    if prueba == "House/on4":
+        os.system("./house_control 1 4")    
+
+    if prueba == "House/on5":
+        os.system("./house_control 1 5")
+
+    if prueba== "House/off1":
+        os.system("./house_control 2 1")
 
 
-    if prueba== "House/off":
-        publish.single("House/off", "World!", hostname="test.mosquitto.org")
-        print("Received message #2, do something else")
-        # Do something else
+    if prueba== "House/off2":
+        os.system("./house_control 2 2")
+         
+           
+    if prueba== "House/off3":
+        os.system("./house_control 2 3")
+
+
+    if prueba== "House/off4":
+        os.system("./house_control 2 4")
+ 
+                        
+    if prueba== "House/off5":
+        os.system("./house_control 2 5")  
+
 
     if prueba== "photo":
         publish.single("photo",on_image(), hostname="test.mosquitto.org")
-        print("SALI DE FOTO")
-        # Do something else
 
 
 def on_image():
     with open("1.jpg", "rb") as image_file:
         encoded = base64.b64encode(image_file.read())
         image_file.close()
-       # return "https://www.google.com/search?q=image&sxsrf=ALeKk039oD5igbmxMCXSAxOuUarquKm7jg:1602725481186&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiIvOnXubXsAhWpp1kKHR8CCUYQ_AUoAXoECBYQAw&biw=1848&bih=981#imgrc=RkjAFRQNR5bUxM"#encoded"
         return encoded
  
 # Create an MQTT client and attach our routines to it.
