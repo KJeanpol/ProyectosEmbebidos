@@ -63,7 +63,7 @@ int main(int argc, char const *argv[])
 			break;
 
 		//Read door status
-		case 3:
+		case 4:
 			printf(" Leer estado de la puerta %i : %i\n", atoi(argv[2]), digitalRead(doors[atoi(argv[2])]));
 			return digitalRead(doors[atoi(argv[2])]);
 			break;
