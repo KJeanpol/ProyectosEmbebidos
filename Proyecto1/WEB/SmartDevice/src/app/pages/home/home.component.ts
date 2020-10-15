@@ -32,8 +32,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     off3:any="House/off3";
     off4:any="House/off4";
     off5:any="House/off5";
-    door:any="House/door";
     photo:any="photo";
+    door:any="door";
     imagePath : SafeResourceUrl;
     msg: any;
     isConnected: boolean = false;
@@ -70,6 +70,15 @@ export class HomeComponent implements OnInit, OnDestroy {
            //      + this.msg.message.payload.toString().base64string);
       });
 
+      this.subscription = this._mqttService.observe(this.door).subscribe((message: IMqttMessage) => {
+        this.msg = message;
+        console.log('msg: ', message.payload.toString())
+        this.logMsg( message.payload.toString());
+     //   this.logMsg('Message: ' + message.payload.toString() + '<br> for topic: ' + message.topic);
+       // this.imagePath = this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' 
+           //      + this.msg.message.payload.toString().base64string);
+      });      
+
       this.subscription = this._mqttService.observe(this.photo).subscribe((message: IMqttMessage) => {
         this.msg = message;
         console.log('msg: ', message.payload.toString())
@@ -81,9 +90,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                  
       });
 
-
-      this.logMsg('subscribed to topic: ' + this.topicname)
-    }
+       }
   
     sendmsg(): void {
   

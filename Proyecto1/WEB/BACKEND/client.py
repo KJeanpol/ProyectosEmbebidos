@@ -14,13 +14,14 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("House/on")
     client.subscribe("House/off")
     client.subscribe("photo")
+    client.subscribe("door")
     
     
 def on_message(client, userdata, msg):
     print(msg.topic)
     prueba=msg.payload.decode('utf-8')
     global count
-    if count <= 3:
+    if count <= 4:
         count+=1
         print(count, "count 2")
     else:
@@ -66,6 +67,19 @@ def on_message(client, userdata, msg):
             publish.single("photo",on_image(), hostname="test.mosquitto.org")
             print("¡foto publicada!")
 
+        if prueba== "door":
+            #AQUI VIENE LO DE LA PUERTA
+          ##  publish.single("photo",on_image(), hostname="test.mosquitto.org")
+            print("¡foto publicada!")
+
+
+def notificarPuerta():
+    with open("1.jpg", "rb") as image_file:
+        print("Convirtiendo foto...")
+        encoded = base64.b64encode(image_file.read())
+        image_file.close()
+        print("foto lista base 64")
+        return encoded
 
 def on_image():
     with open("1.jpg", "rb") as image_file:
