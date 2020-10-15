@@ -45,7 +45,6 @@ int main(int argc, char const *argv[])
 				printf(" Encender luz %i de la casa (gpio %i).\n", atoi(argv[i]), lights[atoi(argv[i]) - 1]);
 				digitalWrite(lights[atoi(argv[i]) - 1], HIGH);
 			}
-
 			break;
 
 		//Turn off lights
@@ -55,12 +54,18 @@ int main(int argc, char const *argv[])
 				printf(" Apagar luz %i de la casa (gpio %i).\n", atoi(argv[i]), lights[atoi(argv[i]) - 1]);
 				digitalWrite(lights[atoi(argv[i]) -1 ], LOW);
 			}
+			break;
 
+		//Read light status
+		case 3:
+			printf(" Leer estado de la luz %i : %i\n", atoi(argv[2]), digitalRead(lights[atoi(argv[2])]));
+			return digitalRead(lights[atoi(argv[2])]);
 			break;
 
 		//Read door status
 		case 3:
 			printf(" Leer estado de la puerta %i : %i\n", atoi(argv[2]), digitalRead(doors[atoi(argv[2])]));
+			return digitalRead(doors[atoi(argv[2])]);
 			break;
 
 		default:
