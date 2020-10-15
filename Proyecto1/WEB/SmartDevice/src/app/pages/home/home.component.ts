@@ -20,8 +20,16 @@ export interface Foo {
 export class HomeComponent implements OnInit, OnDestroy {
     private subscription: Subscription;
     topicname: any;
-    on:any="House/on";
-    off:any="House/off";
+    on1:any="House/on";
+    on2:any="House/on";
+    on3:any="House/on";
+    on4:any="House/on";
+    on5:any="House/on";
+    off1:any="House/off";
+    off2:any="House/off";
+    off3:any="House/off";
+    off4:any="House/off";
+    off5:any="House/off";
     door:any="House/door";
     photo:any="photo";
     imagePath : SafeResourceUrl;
@@ -79,47 +87,60 @@ export class HomeComponent implements OnInit, OnDestroy {
       this._mqttService.unsafePublish(this.topicname, this.msg, { qos: 1, retain: true })
       this.msg = ''
     }
-    on1(): void {
-  
-        //this.socket.emit("news","PRUEBAAA");
-        //use unsafe publish for non-ssl websockets
-        this._mqttService.unsafePublish(this.on, "House/off", { qos: 1, retain: true })
+    On1(): void {
+        this._mqttService.unsafePublish(this.on1, "House/on1", { qos: 1, retain: true })
         this.msg = ''
       }
-      on2(): void {
-  
-        //this.socket.emit("news","PRUEBAAA");
-        //use unsafe publish for non-ssl websockets
-        this._mqttService.unsafePublish(this.on, "1", { qos: 1, retain: true })
+    On2(): void {
+        this._mqttService.unsafePublish(this.on2, "House/on2", { qos: 1, retain: true })
         this.msg = ''
       }
 
-      on3(): void {
-  
-        //this.socket.emit("news","PRUEBAAA");
-        //use unsafe publish for non-ssl websockets
-        this._mqttService.unsafePublish(this.on, "1", { qos: 1, retain: true })
-        this.msg = ''
+    On3(): void {
+      this._mqttService.unsafePublish(this.on3, "House/on3", { qos: 1, retain: true })
+      this.msg = ''
       }
 
 
-      on4(): void {
-  
-        //this.socket.emit("news","PRUEBAAA");
-        //use unsafe publish for non-ssl websockets
+    On4(): void {
+      this._mqttService.unsafePublish(this.on4, "House/on4", { qos: 1, retain: true })
+      this.msg = ''
+      }
+
+    On5(): void {
+        this._mqttService.unsafePublish(this.on5, "House/on5", { qos: 1, retain: true })
+        this.msg = ''
+      }
+    
+    Off1(): void {
+        this._mqttService.unsafePublish(this.off1, "House/off1", { qos: 1, retain: true })
+        this.msg = ''
+      }
+    Off2(): void {
+        this._mqttService.unsafePublish(this.off2, "House/off2", { qos: 1, retain: true })
+        this.msg = ''
+      }
+
+    Off3(): void {
+      this._mqttService.unsafePublish(this.off3, "House/off3", { qos: 1, retain: true })
+      this.msg = ''
+      }
+
+
+    Off4(): void {
+      this._mqttService.unsafePublish(this.off4, "House/off4", { qos: 1, retain: true })
+      this.msg = ''
+      }
+
+    Off5(): void {
+        this._mqttService.unsafePublish(this.off5, "House/off5", { qos: 1, retain: true })
+        this.msg = ''
+      } 
+    TomarFoto(): void {
         this._mqttService.unsafePublish(this.photo, "photo", { qos: 1, retain: true })
         this.msg = ''
-      }
-
-      on5(): void {
-  
-        //this.socket.emit("news","PRUEBAAA");
-        //use unsafe publish for non-ssl websockets
-        this._mqttService.unsafePublish(this.on, "1", { qos: 1, retain: true })
-        this.msg = ''
-      }
-    
-    
+      } 
+      
     logMsg(message): void {
       this.msglog.nativeElement.innerHTML += '<br><hr>' + message;
     }

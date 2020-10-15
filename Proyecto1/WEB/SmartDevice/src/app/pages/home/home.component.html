@@ -9,15 +9,37 @@
         <td><input [(ngModel)]="msg" type="text" /></td>
         <td><button type="button" (click)="sendmsg()">Send</button></td>
     </tr>
+    <div>
     <tr>
         <td></td>
-        <td>&nbsp;&nbsp;<button type="button" (click)="clear()">Clear Log</button></td>
-        <td>&nbsp;&nbsp;<button type="button" (click)="on1()">Clear Log</button></td>
-        <td>&nbsp;&nbsp;<button type="button" (click)="on1()">Clear Log</button></td>
-        <td>&nbsp;&nbsp;<button type="button" (click)="on1()">Clear Log</button></td>
-        <td>&nbsp;&nbsp;<button type="button" (click)="on4()">Clear Log</button></td>
-        <td></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="On1()">Encender Luz 1</button></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="On2()">Encender Luz 2</button></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="On3()">Encender Luz 3</button></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="On4()">Encender Luz 4</button></td>  
+        <td>&nbsp;&nbsp;<button type="button" (click)="On5()">Encender Luz 5</button></td>
+         <td></td>
     </tr>
+</div>
+<div>
+    <tr>
+        <td></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="Off1()">Apagar Luz 1</button></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="Off2()">Apagar Luz 2</button></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="Off3()">Apagar Luz 3</button></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="Off4()">Apagar Luz 4</button></td>  
+        <td>&nbsp;&nbsp;<button type="button" (click)="Off5()">Apagar Luz 5</button></td>
+         <td></td>
+    </tr>
+</div>
+
+<div>
+    <tr>
+        <td></td>
+        <td>&nbsp;&nbsp;<button type="button" (click)="TomarFoto()">Tomar Foto</button></td>
+         <td></td>
+    </tr>
+</div>
+
 </table>
 <br /><br />
 
