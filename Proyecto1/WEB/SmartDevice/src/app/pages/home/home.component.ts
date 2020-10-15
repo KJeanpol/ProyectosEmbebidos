@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     on:any="House/on";
     off:any="House/off";
     door:any="House/door";
+    photo:any="photo";
     msg: any;
     isConnected: boolean = false;
     @ViewChild('msglog', { static: true }) msglog: ElementRef;
@@ -34,10 +35,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   
     subscribeNewTopic(): void {
       console.log('inside subscribe new topic')
-      this.subscription = this._mqttService.observe(this.topicname).subscribe((message: IMqttMessage) => {
+      this.subscription = this._mqttService.observe(this.off).subscribe((message: IMqttMessage) => {
         this.msg = message;
         console.log('msg: ', message)
-        this.logMsg('Message: ' + message.payload.toString() + '<br> for topic: ' + message.topic);
+        // this.logMsg('Message: ' + message.payload.toString() + '<br> for topic: ' + message.topic);
       });
       this.logMsg('subscribed to topic: ' + this.topicname)
     }

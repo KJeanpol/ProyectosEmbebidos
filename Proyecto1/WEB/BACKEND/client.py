@@ -3,8 +3,11 @@
 # check if the received data matches two predefined 'commands'
  
 import paho.mqtt.client as mqtt
+import paho.mqtt.publish as publish
 import ctypes
- MQTT_SERVER = "test.mosquitto.org"
+import base64 
+
+MQTT_SERVER = "test.mosquitto.org"
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
@@ -36,13 +39,11 @@ def on_message(client, userdata, msg):
         print("Sending photo ")
         publish.single("House/off", on_image(), hostname=MQTT_SERVER) 
  
-
+    
 def on_image():
-    f=open("image.jpg", "rb") #3.7kiB in same folder
-    fileContent = f.read()
-    byteArr = bytearray(fileContent)
-    print(byteArr)
-    return byteArr
+    with open("image.jpg", "rb") as image_file:
+        encoded = base64.b64encode(image_file.read())
+        return encoded
 
 # Create an MQTT client and attach our routines to it.
 client = mqtt.Client()
