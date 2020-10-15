@@ -1,4 +1,58 @@
-<table>
+<style>
+    div.main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    div.house {
+        background-image: url("house.png") ;
+        background-size: 100%;
+        
+    }
+    div.fill {
+        height:550px;
+        width:550px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-image: url("https://previews.dropbox.com/p/thumb/AA_53XQoH3QVozPiRUVoUhYeqp0HDs69sLK9yXVHLSuowcvtb20SiVhC8a5AjlBO7ijwTsvDglPUQx9yroUFUbMnQeRYpt97678KFARPPqIgoUS-bTBXqS7JZKGTptFMBUy1-p90dVEtmSBI5eJ-fsKV-Hcra2aTlJVBFBQgA0a0k_fA_IPDvD5ddwXjOyxlUFkcFFkjk3WOyOBdwt5j-AMkXnE41GjIJHzqgzt0eFAyNC8VvjXXsZtEKY725KZWVhasv0i95VXbYHYFc_ZxSF_lgp1FvTbDogJsZ72_dXCZiONje1xC7IT5fRTqLidoZ47NdwBCjPrO61hY7BNcTEvF3yNEglPfdXUR2YJtrottKw/p.jpeg?fv_content=true&size_mode=5");
+    }   
+    div.photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    </style>
+<div>
+    <h1>HOUSE CONTROLLER</h1>
+</div>  
+<div class="main">
+    <div class="fill">
+    <!-- <img src="house.jpg" alt="Flowers in Chania"> -->
+       &nbsp;&nbsp;<button style="position: absolute; left: 140px; top: 190px;" type="button" (click)="On1()">ON</button>
+       &nbsp;&nbsp;<button style="position: absolute; left: 180px; top: 190px;" type="button" (click)="Off1()">OFF</button>
+       
+       &nbsp;&nbsp;<button style="position: absolute; left: 140px; top: 450px;" type="button" (click)="On2()">ON</button>
+       &nbsp;&nbsp;<button style="position: absolute; left: 180px; top: 450px;" type="button" (click)="Off2()">OFF</button>
+       
+       &nbsp;&nbsp;<button style="position: absolute; left: 260px; top: 450px;" type="button" (click)="On3()">ON</button>
+       &nbsp;&nbsp;<button style="position: absolute; left: 300px; top: 450px;" type="button" (click)="Off3()">OFF</button>
+       
+       &nbsp;&nbsp;<button style="position: absolute; left: 440px; top: 200px;" type="button" (click)="On4()">ON</button>
+       &nbsp;&nbsp;<button style="position: absolute; left: 480px; top: 200px;" type="button" (click)="Off4()">OFF</button>
+       
+       &nbsp;&nbsp;<button style="position: absolute; left: 440px; top: 400px;" type="button" (click)="On5()">ON</button>
+       &nbsp;&nbsp;<button style="position: absolute; left: 480px; top: 400px;" type="button" (click)="Off5()">OFF</button>
+       
+       
+    </div>
+    <div class="photo">
+        &nbsp;&nbsp;<button type="button" (click)="TomarFoto()">Tomar Foto</button>
+        <img [src]="imagePath" style="height:500px;width:500px">
+    </div>
+</div>
+<!-- <table>
     <tr>
         <td>Topic: </td>
         <td><input [(ngModel)]="topicname" type="text" /></td>
@@ -43,10 +97,9 @@
 </table>
 <br /><br />
 
-
 <div>
     <img [src]="imagePath" style="height:500px;width:500px">
 </div>
 
 
-
+ -->
