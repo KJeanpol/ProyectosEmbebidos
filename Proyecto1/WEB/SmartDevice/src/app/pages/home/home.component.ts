@@ -153,6 +153,10 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.msg = ''
       } 
       
+    Door(): void {
+        this._mqttService.unsafePublish(this.door, "door", { qos: 1, retain: true })
+        this.msg = ''
+      }       
     logMsg(message): void {
       this.msglog.nativeElement.innerHTML += '<br><hr>' + message;
     }
