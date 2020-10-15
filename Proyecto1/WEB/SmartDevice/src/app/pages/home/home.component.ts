@@ -20,16 +20,18 @@ export interface Foo {
 export class HomeComponent implements OnInit, OnDestroy {
     private subscription: Subscription;
     topicname: any;
-    on1:any="House/on";
-    on2:any="House/on";
-    on3:any="House/on";
-    on4:any="House/on";
-    on5:any="House/on";
-    off1:any="House/off";
-    off2:any="House/off";
-    off3:any="House/off";
-    off4:any="House/off";
-    off5:any="House/off";
+    on:any="House/on";
+    on1:any="House/on1";
+    on2:any="House/on2";
+    on3:any="House/on3";
+    on4:any="House/on4";
+    on5:any="House/on5";
+    off:any="House/off";
+    off1:any="House/off1";
+    off2:any="House/off2";
+    off3:any="House/off3";
+    off4:any="House/off4";
+    off5:any="House/off5";
     door:any="House/door";
     photo:any="photo";
     imagePath : SafeResourceUrl;
@@ -40,7 +42,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     constructor(private _mqttService: MqttService, private socket:WebSocketService,
       private _sanitizer: DomSanitizer ) { }
   
-    ngOnInit(): void {}
+    ngOnInit(): void {
+      this.subscribeNewTopic();
+
+    }
   
     ngOnDestroy(): void {
       this.subscription.unsubscribe();
@@ -88,52 +93,52 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.msg = ''
     }
     On1(): void {
-        this._mqttService.unsafePublish(this.on1, "House/on1", { qos: 1, retain: true })
+        this._mqttService.unsafePublish(this.on, "House/on1", { qos: 1, retain: true })
         this.msg = ''
       }
     On2(): void {
-        this._mqttService.unsafePublish(this.on2, "House/on2", { qos: 1, retain: true })
+        this._mqttService.unsafePublish(this.on, "House/on2", { qos: 1, retain: true })
         this.msg = ''
       }
 
     On3(): void {
-      this._mqttService.unsafePublish(this.on3, "House/on3", { qos: 1, retain: true })
+      this._mqttService.unsafePublish(this.on, "House/on3", { qos: 1, retain: true })
       this.msg = ''
       }
 
 
     On4(): void {
-      this._mqttService.unsafePublish(this.on4, "House/on4", { qos: 1, retain: true })
+      this._mqttService.unsafePublish(this.on, "House/on4", { qos: 1, retain: true })
       this.msg = ''
       }
 
     On5(): void {
-        this._mqttService.unsafePublish(this.on5, "House/on5", { qos: 1, retain: true })
+        this._mqttService.unsafePublish(this.on, "House/on5", { qos: 1, retain: true })
         this.msg = ''
       }
     
     Off1(): void {
-        this._mqttService.unsafePublish(this.off1, "House/off1", { qos: 1, retain: true })
+        this._mqttService.unsafePublish(this.off, "House/off1", { qos: 1, retain: true })
         this.msg = ''
       }
     Off2(): void {
-        this._mqttService.unsafePublish(this.off2, "House/off2", { qos: 1, retain: true })
+        this._mqttService.unsafePublish(this.off, "House/off2", { qos: 1, retain: true })
         this.msg = ''
       }
 
     Off3(): void {
-      this._mqttService.unsafePublish(this.off3, "House/off3", { qos: 1, retain: true })
+      this._mqttService.unsafePublish(this.off, "House/off3", { qos: 1, retain: true })
       this.msg = ''
       }
 
 
     Off4(): void {
-      this._mqttService.unsafePublish(this.off4, "House/off4", { qos: 1, retain: true })
+      this._mqttService.unsafePublish(this.off, "House/off4", { qos: 1, retain: true })
       this.msg = ''
       }
 
     Off5(): void {
-        this._mqttService.unsafePublish(this.off5, "House/off5", { qos: 1, retain: true })
+        this._mqttService.unsafePublish(this.off, "House/off5", { qos: 1, retain: true })
         this.msg = ''
       } 
     TomarFoto(): void {
