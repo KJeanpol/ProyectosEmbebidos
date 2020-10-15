@@ -69,9 +69,20 @@ def on_message(client, userdata, msg):
 
         if prueba== "door":
             #AQUI VIENE LO DE LA PUERTA
-          ##  publish.single("photo",on_image(), hostname="test.mosquitto.org")
-            print("¡foto publicada!")
-
+            lista_estados = ""
+            print("Obteniendo estados")
+            for i in range(4):
+                abierta = os.system("./house_control 4 {}".format(i1))
+                puerta="Puerta {} ".format(i+1)
+                if( abierta == 0):
+                    puerta+="abierta"
+                else:
+                    puerta+="cerrada"
+                lista_estados += puerta
+                lista_estados += " , "
+            publish.single("door",lista_estados, hostname="test.mosquitto.org")
+            print("¡Puertas Publicadas!")
+            print(lista_estados)
 
 def notificarPuerta():
     with open("1.jpg", "rb") as image_file:
