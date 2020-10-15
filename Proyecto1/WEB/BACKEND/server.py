@@ -72,7 +72,7 @@ def on_message(client, userdata, msg):
             lista_estados = ""
             print("Obteniendo estados")
             for i in range(4):
-                abierta = os.system("./house_control 4 {}".format(i1))
+                abierta = os.system("./house_control 4 {}".format(i))
                 puerta="Puerta {} ".format(i+1)
                 if( abierta == 0):
                     puerta+="abierta"
