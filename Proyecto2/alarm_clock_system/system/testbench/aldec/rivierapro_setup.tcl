@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 20.1 711 linux 2020.11.05.17:23:41
+# ACDS 20.1 711 win32 2020.11.04.13:15:53
 # ----------------------------------------
 # Auto-generated simulation script rivierapro_setup.tcl
 # ----------------------------------------
@@ -113,7 +113,7 @@ if ![info exists QSYS_SIMDIR] {
 }
 
 if ![info exists QUARTUS_INSTALL_DIR] { 
-  set QUARTUS_INSTALL_DIR "/home/nachomarin/intelFPGA_lite/20.1/quartus/"
+  set QUARTUS_INSTALL_DIR "C:/intelfpga_lite/20.1/quartus/"
 }
 
 if ![info exists USER_DEFINED_COMPILE_OPTIONS] { 
@@ -153,14 +153,14 @@ if { [ string match "Active" $Aldec ] } {
 alias file_copy {
   echo "\[exec\] file_copy"
   file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.dat ./
-  file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.mif ./
+  file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.hex ./
   file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.mif ./
-  file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.mif ./
+  file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.dat ./
   file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.hex ./
+  file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.mif ./
   file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.dat ./
   file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.hex ./
-  file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.hex ./
-  file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.dat ./
+  file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.mif ./
   file copy -force $QSYS_SIMDIR/system_tb/simulation/submodules/system_RAM.hex ./
 }
 
@@ -282,11 +282,11 @@ alias com {
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_merlin_master_agent.sv"                                 -l altera_common_sv_packages -work CPU_data_master_agent                
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_merlin_slave_translator.sv"                             -l altera_common_sv_packages -work UART_avalon_jtag_slave_translator    
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_merlin_master_translator.sv"                            -l altera_common_sv_packages -work CPU_data_master_translator           
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_sysclk.v"                                                        -work cpu                                  
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu.v"                                                                           -work cpu                                  
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_sysclk.v"                                                        -work cpu                                  
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_tck.v"                                                           -work cpu                                  
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_wrapper.v"                                                       -work cpu                                  
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_test_bench.v"                                                                -work cpu                                  
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_tck.v"                                                           -work cpu                                  
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_reset_controller.v"                                                                  -work rst_controller                       
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_reset_synchronizer.v"                                                                -work rst_controller                       
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/system_tb/simulation/submodules/system_irq_mapper.sv"                                          -l altera_common_sv_packages -work irq_mapper                           

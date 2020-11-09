@@ -74,44 +74,48 @@
    type="SDC"
    library="cpu" />
  <file
-   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.dat"
-   type="DAT"
+   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu.v"
+   type="VERILOG"
    library="cpu" />
  <file
    path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_sysclk.v"
    type="VERILOG"
    library="cpu" />
  <file
-   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.mif"
-   type="MIF"
-   library="cpu" />
- <file
-   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_nios2_waves.do"
-   type="OTHER"
-   library="cpu" />
- <file
-   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu.v"
+   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_tck.v"
    type="VERILOG"
-   library="cpu" />
- <file
-   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.mif"
-   type="MIF"
    library="cpu" />
  <file
    path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_wrapper.v"
    type="VERILOG"
    library="cpu" />
  <file
-   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_test_bench.v"
-   type="VERILOG"
+   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_nios2_waves.do"
+   type="OTHER"
    library="cpu" />
  <file
-   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.mif"
+   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.dat"
+   type="DAT"
+   library="cpu" />
+ <file
+   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.hex"
+   type="HEX"
+   library="cpu" />
+ <file
+   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.mif"
    type="MIF"
+   library="cpu" />
+ <file
+   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.dat"
+   type="DAT"
    library="cpu" />
  <file
    path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.hex"
    type="HEX"
+   library="cpu" />
+ <file
+   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.mif"
+   type="MIF"
    library="cpu" />
  <file
    path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.dat"
@@ -122,16 +126,12 @@
    type="HEX"
    library="cpu" />
  <file
-   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_tck.v"
+   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.mif"
+   type="MIF"
+   library="cpu" />
+ <file
+   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_test_bench.v"
    type="VERILOG"
-   library="cpu" />
- <file
-   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.hex"
-   type="HEX"
-   library="cpu" />
- <file
-   path="system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.dat"
-   type="DAT"
    library="cpu" />
  <file
    path="system/testbench/system_tb/simulation/submodules/altera_reset_controller.v"

@@ -178,11 +178,6 @@ module system_mm_interconnect_0_router
 
 
 
-    // -------------------------------------------------------
-    // Write and read transaction signals
-    // -------------------------------------------------------
-    wire read_transaction;
-    assign read_transaction  = sink_data[PKT_TRANS_READ];
 
 
     system_mm_interconnect_0_router_default_decode the_default_decode(
@@ -215,7 +210,7 @@ module system_mm_interconnect_0_router
     end
 
     // ( 0x3070 .. 0x3080 )
-    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 14'h3070  && read_transaction  ) begin
+    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 14'h3070   ) begin
             src_channel = 10'b1000000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
     end

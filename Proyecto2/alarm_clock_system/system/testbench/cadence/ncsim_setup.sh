@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 20.1 711 linux 2020.11.05.17:23:41
+# ACDS 20.1 711 win32 2020.11.04.13:15:53
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,12 +106,12 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 20.1 711 linux 2020.11.05.17:23:41
+# ACDS 20.1 711 win32 2020.11.04.13:15:53
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="system_tb"
 QSYS_SIMDIR="./../"
-QUARTUS_INSTALL_DIR="/home/nachomarin/intelFPGA_lite/20.1/quartus/"
+QUARTUS_INSTALL_DIR="C:/intelfpga_lite/20.1/quartus/"
 SKIP_FILE_COPY=0
 SKIP_DEV_COM=0
 SKIP_COM=0
@@ -187,14 +187,14 @@ mkdir -p ./libraries/cyclonev_pcie_hip_ver/
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
   cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.dat ./
-  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.mif ./
+  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.hex ./
   cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.mif ./
-  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.mif ./
+  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.dat ./
   cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.hex ./
+  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.mif ./
   cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.dat ./
   cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.hex ./
-  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.hex ./
-  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.dat ./
+  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.mif ./
   cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_RAM.hex ./
 fi
 
@@ -235,11 +235,11 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_merlin_master_agent.sv"                                 -work CPU_data_master_agent                 -cdslib ./cds_libs/CPU_data_master_agent.cds.lib                
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_merlin_slave_translator.sv"                             -work UART_avalon_jtag_slave_translator     -cdslib ./cds_libs/UART_avalon_jtag_slave_translator.cds.lib    
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_merlin_master_translator.sv"                            -work CPU_data_master_translator            -cdslib ./cds_libs/CPU_data_master_translator.cds.lib           
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_sysclk.v"                           -work cpu                                   -cdslib ./cds_libs/cpu.cds.lib                                  
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu.v"                                              -work cpu                                   -cdslib ./cds_libs/cpu.cds.lib                                  
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_sysclk.v"                           -work cpu                                   -cdslib ./cds_libs/cpu.cds.lib                                  
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_tck.v"                              -work cpu                                   -cdslib ./cds_libs/cpu.cds.lib                                  
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_wrapper.v"                          -work cpu                                   -cdslib ./cds_libs/cpu.cds.lib                                  
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_test_bench.v"                                   -work cpu                                   -cdslib ./cds_libs/cpu.cds.lib                                  
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_tck.v"                              -work cpu                                   -cdslib ./cds_libs/cpu.cds.lib                                  
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_reset_controller.v"                                     -work rst_controller                        -cdslib ./cds_libs/rst_controller.cds.lib                       
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/system_tb/simulation/submodules/altera_reset_synchronizer.v"                                   -work rst_controller                        -cdslib ./cds_libs/rst_controller.cds.lib                       
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/system_tb/simulation/submodules/system_irq_mapper.sv"                                          -work irq_mapper                            -cdslib ./cds_libs/irq_mapper.cds.lib                           

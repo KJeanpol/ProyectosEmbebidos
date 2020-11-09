@@ -39,33 +39,32 @@ Progress: (2) searching C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/root_com
 Info: Reading index C:\intelfpga_lite\20.1\quartus\sopc_builder\bin\root_components.ipx
 Info: C:\intelfpga_lite\20.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
 Info: Reading index C:\intelfpga_lite\20.1\quartus\sopc_builder\bin\ip_component_categories.ipx
-Info: C:\intelfpga_lite\20.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0.00 seconds
-Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.00 seconds
+Info: C:\intelfpga_lite\20.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0.02 seconds
+Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.02 seconds
 Info: C:/Users/Public/alarm_clock_system/system/testbench/ip/**/* matched 0 files in 0.00 seconds
 Info: Reading index C:\Users\Public\alarm_clock_system\system\testbench\system.ipx
 Progress: Loading alarm_clock_system/system.qsys
-Info: C:/Users/Public/alarm_clock_system/* matched 6 files in 0.00 seconds
+Info: C:/Users/Public/alarm_clock_system/* matched 4 files in 0.00 seconds
 Info: C:/Users/Public/alarm_clock_system/ip/**/* matched 0 files in 0.00 seconds
-Info: C:/Users/Public/alarm_clock_system/*/* matched 10 files in 0.00 seconds
-Info: C:\Users\Public\alarm_clock_system\system\testbench\system.ipx described 0 plugins, 3 paths, in 0.01 seconds
-Progress: Loading testbench/system_tb.qsys
-Info: C:/Users/Public/alarm_clock_system/system/testbench/* matched 12 files in 0.01 seconds
-Info: C:/Users/Public/alarm_clock_system/system/testbench/*/* matched 9 files in 0.00 seconds
+Info: C:/Users/Public/alarm_clock_system/*/* matched 10 files in 0.01 seconds
+Info: C:\Users\Public\alarm_clock_system\system\testbench\system.ipx described 0 plugins, 3 paths, in 0.05 seconds
+Info: C:/Users/Public/alarm_clock_system/system/testbench/* matched 4 files in 0.06 seconds
+Info: C:/Users/Public/alarm_clock_system/system/testbench/*/* matched 0 files in 0.00 seconds
 Info: C:/Users/Inspiron 14-7460/.altera.quartus/ip/20.1/**/* matched 0 files in 0.00 seconds
 Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
 Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
 Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
 Info: Reading index C:\intelfpga_lite\20.1\ip\altera\altera_components.ipx
-Info: C:\intelfpga_lite\20.1\ip\altera\altera_components.ipx described 1971 plugins, 0 paths, in 0.14 seconds
-Info: C:/intelfpga_lite/20.1/ip/**/* matched 109 files in 0.17 seconds
+Info: C:\intelfpga_lite\20.1\ip\altera\altera_components.ipx described 1971 plugins, 0 paths, in 0.23 seconds
+Info: C:/intelfpga_lite/20.1/ip/**/* matched 109 files in 0.24 seconds
 Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0.00 seconds
 Info: Reading index C:\intelfpga_lite\20.1\quartus\sopc_builder\builtin.ipx
-Info: C:\intelfpga_lite\20.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
-Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/**/* matched 8 files in 0.01 seconds
+Info: C:\intelfpga_lite\20.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.04 seconds
+Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/**/* matched 8 files in 0.05 seconds
 Info: C:/intelfpga_lite/20.1/quartus/common/librarian/factories/**/* matched 0 files in 0.00 seconds
 Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
-Info: C:\intelfpga_lite\20.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.20 seconds
-Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.20 seconds
+Info: C:\intelfpga_lite\20.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.38 seconds
+Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.38 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -367,19 +366,19 @@ Info: system_inst_set_bfm: "system_tb" instantiated altera_conduit_bfm "system_i
 Info: Reusing file C:/Users/Public/alarm_clock_system/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
 Info: CPU: "system_inst" instantiated altera_nios2_gen2 "CPU"
 Info: H_1: Starting RTL generation for module 'system_H_1'
-Info: H_1:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_H_1 --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0030_H_1_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0030_H_1_gen//system_H_1_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0030_H_1_gen/  ]
+Info: H_1:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_H_1 --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0006_H_1_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0006_H_1_gen//system_H_1_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0006_H_1_gen/  ]
 Info: H_1: Done RTL generation for module 'system_H_1'
 Info: H_1: "system_inst" instantiated altera_avalon_pio "H_1"
 Info: RAM: Starting RTL generation for module 'system_RAM'
-Info: RAM:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_RAM --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0031_RAM_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0031_RAM_gen//system_RAM_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0031_RAM_gen/  ]
+Info: RAM:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_RAM --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0007_RAM_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0007_RAM_gen//system_RAM_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0007_RAM_gen/  ]
 Info: RAM: Done RTL generation for module 'system_RAM'
 Info: RAM: "system_inst" instantiated altera_avalon_onchip_memory2 "RAM"
 Info: SET: Starting RTL generation for module 'system_SET'
-Info: SET:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_SET --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0032_SET_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0032_SET_gen//system_SET_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0032_SET_gen/  ]
+Info: SET:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_SET --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0008_SET_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0008_SET_gen//system_SET_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0008_SET_gen/  ]
 Info: SET: Done RTL generation for module 'system_SET'
 Info: SET: "system_inst" instantiated altera_avalon_pio "SET"
 Info: UART: Starting RTL generation for module 'system_UART'
-Info: UART:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_UART --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0033_UART_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0033_UART_gen//system_UART_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0033_UART_gen/  ]
+Info: UART:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_UART --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0009_UART_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0009_UART_gen//system_UART_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0009_UART_gen/  ]
 Info: UART: Done RTL generation for module 'system_UART'
 Info: UART: "system_inst" instantiated altera_avalon_jtag_uart "UART"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -396,14 +395,14 @@ Info: mm_interconnect_0: "system_inst" instantiated altera_mm_interconnect "mm_i
 Info: irq_mapper: "system_inst" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "system_inst" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'system_CPU_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=system_CPU_cpu --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0036_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/20.1/quartus/bin64/ --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0036_cpu_gen//system_CPU_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0036_cpu_gen/  ]
-Info: cpu: # 2020.11.04 13:15:49 (*) Starting Nios II generation
-Info: cpu: # 2020.11.04 13:15:49 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2020.11.04 13:15:49 (*)   Creating all objects for CPU
-Info: cpu: # 2020.11.04 13:15:50 (*)   Creating 'C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0036_cpu_gen//system_CPU_cpu_nios2_waves.do'
-Info: cpu: # 2020.11.04 13:15:50 (*)   Generating RTL from CPU objects
-Info: cpu: # 2020.11.04 13:15:50 (*)   Creating plain-text RTL
-Info: cpu: # 2020.11.04 13:15:51 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=system_CPU_cpu --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0012_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/20.1/quartus/bin64/ --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0012_cpu_gen//system_CPU_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0012_cpu_gen/  ]
+Info: cpu: # 2020.11.04 13:13:06 (*) Starting Nios II generation
+Info: cpu: # 2020.11.04 13:13:06 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2020.11.04 13:13:06 (*)   Creating all objects for CPU
+Info: cpu: # 2020.11.04 13:13:09 (*)   Creating 'C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0012_cpu_gen//system_CPU_cpu_nios2_waves.do'
+Info: cpu: # 2020.11.04 13:13:09 (*)   Generating RTL from CPU objects
+Info: cpu: # 2020.11.04 13:13:09 (*)   Creating plain-text RTL
+Info: cpu: # 2020.11.04 13:13:09 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'system_CPU_cpu'
 Info: cpu: "CPU" instantiated altera_nios2_gen2_unit "cpu"
 Info: CPU_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "CPU_data_master_translator"

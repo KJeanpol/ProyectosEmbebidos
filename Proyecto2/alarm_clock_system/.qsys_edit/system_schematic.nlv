@@ -15,18 +15,18 @@ preplace inst system.UART -pg 1 -lvl 3 -y 280
 preplace inst system.H_1 -pg 1 -lvl 3 -y 80
 preplace inst system -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst system.H_2 -pg 1 -lvl 3 -y 180
-preplace netloc EXPORT<net_container>system</net_container>(SLAVE)S_1.external_connection,(SLAVE)system.s_1) 1 0 3 NJ 690 NJ 690 NJ
-preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.reset,(SLAVE)CLK.clk_in_reset) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>system</net_container>(SLAVE)M_2.reset,(MASTER)CLK.clk_reset,(SLAVE)M_1.reset,(SLAVE)SET.reset,(SLAVE)UART.reset,(SLAVE)S_2.reset,(SLAVE)RAM.reset1,(SLAVE)H_1.reset,(SLAVE)H_2.reset,(SLAVE)S_1.reset,(SLAVE)CPU.reset) 1 1 2 280 910 740
-preplace netloc INTERCONNECT<net_container>system</net_container>(SLAVE)M_1.s1,(SLAVE)S_1.s1,(MASTER)CPU.instruction_master,(SLAVE)H_2.s1,(SLAVE)M_2.s1,(SLAVE)RAM.s1,(SLAVE)H_1.s1,(SLAVE)CPU.debug_mem_slave,(SLAVE)S_2.s1,(SLAVE)SET.s1,(MASTER)CPU.data_master,(SLAVE)UART.avalon_jtag_slave) 1 1 2 300 930 680
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)M_1.external_connection,(SLAVE)system.m_1) 1 0 3 NJ 890 NJ 890 NJ
 preplace netloc POINT_TO_POINT<net_container>system</net_container>(MASTER)CPU.irq,(SLAVE)UART.irq) 1 2 1 660
-preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.s_2,(SLAVE)S_2.external_connection) 1 0 3 NJ 790 NJ 790 NJ
+preplace netloc FAN_OUT<net_container>system</net_container>(SLAVE)S_2.reset,(SLAVE)M_1.reset,(SLAVE)CPU.reset,(MASTER)CLK.clk_reset,(SLAVE)UART.reset,(SLAVE)M_2.reset,(SLAVE)S_1.reset,(SLAVE)H_2.reset,(SLAVE)H_1.reset,(SLAVE)SET.reset,(SLAVE)RAM.reset1) 1 1 2 280 910 740
 preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.h_2,(SLAVE)H_2.external_connection) 1 0 3 NJ 210 NJ 210 NJ
+preplace netloc FAN_OUT<net_container>system</net_container>(SLAVE)H_1.clk,(SLAVE)S_2.clk,(SLAVE)UART.clk,(SLAVE)S_1.clk,(MASTER)CLK.clk,(SLAVE)H_2.clk,(SLAVE)M_1.clk,(SLAVE)M_2.clk,(SLAVE)CPU.clk,(SLAVE)SET.clk,(SLAVE)RAM.clk1) 1 1 2 260 810 720
 preplace netloc EXPORT<net_container>system</net_container>(SLAVE)SET.external_connection,(SLAVE)system.set) 1 0 3 NJ 590 NJ 590 NJ
-preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.h_1,(SLAVE)H_1.external_connection) 1 0 3 NJ 190 NJ 190 NJ
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)CLK.clk_in_reset,(SLAVE)system.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)S_2.external_connection,(SLAVE)system.s_2) 1 0 3 NJ 790 NJ 790 NJ
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.m_2,(SLAVE)M_2.external_connection) 1 0 3 NJ 490 NJ 490 NJ
 preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.clk,(SLAVE)CLK.clk_in) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>system</net_container>(SLAVE)M_2.clk,(SLAVE)H_1.clk,(SLAVE)UART.clk,(SLAVE)M_1.clk,(SLAVE)S_1.clk,(SLAVE)S_2.clk,(MASTER)CLK.clk,(SLAVE)H_2.clk,(SLAVE)SET.clk,(SLAVE)CPU.clk,(SLAVE)RAM.clk1) 1 1 2 260 810 720
-preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.m_1,(SLAVE)M_1.external_connection) 1 0 3 NJ 890 NJ 890 NJ
-preplace netloc EXPORT<net_container>system</net_container>(SLAVE)M_2.external_connection,(SLAVE)system.m_2) 1 0 3 NJ 490 NJ 490 NJ
+preplace netloc INTERCONNECT<net_container>system</net_container>(SLAVE)H_2.s1,(SLAVE)M_1.s1,(MASTER)CPU.data_master,(SLAVE)H_1.s1,(SLAVE)CPU.debug_mem_slave,(SLAVE)RAM.s1,(MASTER)CPU.instruction_master,(SLAVE)S_1.s1,(SLAVE)S_2.s1,(SLAVE)M_2.s1,(SLAVE)UART.avalon_jtag_slave,(SLAVE)SET.s1) 1 1 2 300 930 680
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.s_1,(SLAVE)S_1.external_connection) 1 0 3 NJ 690 NJ 690 NJ
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)H_1.external_connection,(SLAVE)system.h_1) 1 0 3 NJ 190 NJ 190 NJ
 levelinfo -pg 1 0 50 930
 levelinfo -hier system 60 90 420 770 920

@@ -1,12 +1,12 @@
-# system info system_tb on 2020.11.05.17:23:38
+# system info system_tb on 2020.11.04.13:15:52
 system_info:
 name,value
 DEVICE,5CEBA2F17A7
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1604618599
+GENERATION_ID,1604517323
 #
 #
-# Files generated for system_tb on 2020.11.05.17:23:38
+# Files generated for system_tb on 2020.11.04.13:15:52
 files:
 filepath,kind,attributes,module,is_top
 system/testbench/system_tb/simulation/system_tb.v,VERILOG,,system_tb,true
@@ -31,21 +31,21 @@ system/testbench/system_tb/simulation/submodules/altera_reset_controller.v,VERIL
 system/testbench/system_tb/simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
 system/testbench/system_tb/simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
 system/testbench/system_tb/simulation/submodules/system_CPU_cpu.sdc,SDC,,system_CPU_cpu,false
-system/testbench/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.dat,DAT,,system_CPU_cpu,false
-system/testbench/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_sysclk.v,VERILOG,,system_CPU_cpu,false
-system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.mif,MIF,,system_CPU_cpu,false
-system/testbench/system_tb/simulation/submodules/system_CPU_cpu_nios2_waves.do,OTHER,,system_CPU_cpu,false
 system/testbench/system_tb/simulation/submodules/system_CPU_cpu.v,VERILOG,,system_CPU_cpu,false
-system/testbench/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.mif,MIF,,system_CPU_cpu,false
+system/testbench/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_sysclk.v,VERILOG,,system_CPU_cpu,false
+system/testbench/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_tck.v,VERILOG,,system_CPU_cpu,false
 system/testbench/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_wrapper.v,VERILOG,,system_CPU_cpu,false
-system/testbench/system_tb/simulation/submodules/system_CPU_cpu_test_bench.v,VERILOG,,system_CPU_cpu,false
-system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.mif,MIF,,system_CPU_cpu,false
+system/testbench/system_tb/simulation/submodules/system_CPU_cpu_nios2_waves.do,OTHER,,system_CPU_cpu,false
+system/testbench/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.dat,DAT,,system_CPU_cpu,false
+system/testbench/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.hex,HEX,,system_CPU_cpu,false
+system/testbench/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.mif,MIF,,system_CPU_cpu,false
+system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.dat,DAT,,system_CPU_cpu,false
 system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.hex,HEX,,system_CPU_cpu,false
+system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.mif,MIF,,system_CPU_cpu,false
 system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.dat,DAT,,system_CPU_cpu,false
 system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.hex,HEX,,system_CPU_cpu,false
-system/testbench/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_tck.v,VERILOG,,system_CPU_cpu,false
-system/testbench/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.hex,HEX,,system_CPU_cpu,false
-system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.dat,DAT,,system_CPU_cpu,false
+system/testbench/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.mif,MIF,,system_CPU_cpu,false
+system/testbench/system_tb/simulation/submodules/system_CPU_cpu_test_bench.v,VERILOG,,system_CPU_cpu,false
 system/testbench/system_tb/simulation/submodules/altera_merlin_master_translator.sv,SYSTEM_VERILOG,,altera_merlin_master_translator,false
 system/testbench/system_tb/simulation/submodules/altera_merlin_slave_translator.sv,SYSTEM_VERILOG,,altera_merlin_slave_translator,false
 system/testbench/system_tb/simulation/submodules/altera_merlin_master_agent.sv,SYSTEM_VERILOG,,altera_merlin_master_agent,false

@@ -6,26 +6,26 @@
 module system_tb (
 	);
 
-	wire        system_inst_clk_bfm_clk_clk;        // system_inst_clk_bfm:clk -> [system_inst:clk_clk, system_inst_reset_bfm:clk]
-	wire  [3:0] system_inst_h_1_export;             // system_inst:h_1_export -> system_inst_h_1_bfm:sig_export
-	wire  [3:0] system_inst_h_2_export;             // system_inst:h_2_export -> system_inst_h_2_bfm:sig_export
-	wire  [3:0] system_inst_m_1_export;             // system_inst:m_1_export -> system_inst_m_1_bfm:sig_export
-	wire  [3:0] system_inst_m_2_export;             // system_inst:m_2_export -> system_inst_m_2_bfm:sig_export
-	wire  [3:0] system_inst_s_1_export;             // system_inst:s_1_export -> system_inst_s_1_bfm:sig_export
-	wire  [3:0] system_inst_s_2_export;             // system_inst:s_2_export -> system_inst_s_2_bfm:sig_export
-	wire  [4:0] system_inst_set_bfm_conduit_export; // system_inst_set_bfm:sig_export -> system_inst:set_export
-	wire        system_inst_reset_bfm_reset_reset;  // system_inst_reset_bfm:reset -> system_inst:reset_reset_n
+	wire        system_inst_clk_bfm_clk_clk;       // system_inst_clk_bfm:clk -> [system_inst:clk_clk, system_inst_reset_bfm:clk]
+	wire  [3:0] system_inst_h_1_export;            // system_inst:h_1_export -> system_inst_h_1_bfm:sig_export
+	wire  [3:0] system_inst_h_2_export;            // system_inst:h_2_export -> system_inst_h_2_bfm:sig_export
+	wire  [3:0] system_inst_m_1_export;            // system_inst:m_1_export -> system_inst_m_1_bfm:sig_export
+	wire  [3:0] system_inst_m_2_export;            // system_inst:m_2_export -> system_inst_m_2_bfm:sig_export
+	wire  [3:0] system_inst_s_1_export;            // system_inst:s_1_export -> system_inst_s_1_bfm:sig_export
+	wire  [3:0] system_inst_s_2_export;            // system_inst:s_2_export -> system_inst_s_2_bfm:sig_export
+	wire  [4:0] system_inst_set_export;            // system_inst:set_export -> system_inst_set_bfm:sig_export
+	wire        system_inst_reset_bfm_reset_reset; // system_inst_reset_bfm:reset -> system_inst:reset_reset_n
 
 	system system_inst (
-		.clk_clk       (system_inst_clk_bfm_clk_clk),        //   clk.clk
-		.h_1_export    (system_inst_h_1_export),             //   h_1.export
-		.h_2_export    (system_inst_h_2_export),             //   h_2.export
-		.m_1_export    (system_inst_m_1_export),             //   m_1.export
-		.m_2_export    (system_inst_m_2_export),             //   m_2.export
-		.reset_reset_n (system_inst_reset_bfm_reset_reset),  // reset.reset_n
-		.s_1_export    (system_inst_s_1_export),             //   s_1.export
-		.s_2_export    (system_inst_s_2_export),             //   s_2.export
-		.set_export    (system_inst_set_bfm_conduit_export)  //   set.export
+		.clk_clk       (system_inst_clk_bfm_clk_clk),       //   clk.clk
+		.h_1_export    (system_inst_h_1_export),            //   h_1.export
+		.h_2_export    (system_inst_h_2_export),            //   h_2.export
+		.m_1_export    (system_inst_m_1_export),            //   m_1.export
+		.m_2_export    (system_inst_m_2_export),            //   m_2.export
+		.reset_reset_n (system_inst_reset_bfm_reset_reset), // reset.reset_n
+		.s_1_export    (system_inst_s_1_export),            //   s_1.export
+		.s_2_export    (system_inst_s_2_export),            //   s_2.export
+		.set_export    (system_inst_set_export)             //   set.export
 	);
 
 	altera_avalon_clock_source #(
@@ -68,7 +68,7 @@ module system_tb (
 	);
 
 	altera_conduit_bfm_0002 system_inst_set_bfm (
-		.sig_export (system_inst_set_bfm_conduit_export)  // conduit.export
+		.sig_export (system_inst_set_export)  // conduit.export
 	);
 
 endmodule

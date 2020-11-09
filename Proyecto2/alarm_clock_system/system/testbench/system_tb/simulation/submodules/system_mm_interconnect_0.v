@@ -67,7 +67,10 @@ module system_mm_interconnect_0 (
 		output wire [31:0] S_2_s1_writedata,                      //                                .writedata
 		output wire        S_2_s1_chipselect,                     //                                .chipselect
 		output wire [1:0]  SET_s1_address,                        //                          SET_s1.address
+		output wire        SET_s1_write,                          //                                .write
 		input  wire [31:0] SET_s1_readdata,                       //                                .readdata
+		output wire [31:0] SET_s1_writedata,                      //                                .writedata
+		output wire        SET_s1_chipselect,                     //                                .chipselect
 		output wire [0:0]  UART_avalon_jtag_slave_address,        //          UART_avalon_jtag_slave.address
 		output wire        UART_avalon_jtag_slave_write,          //                                .write
 		output wire        UART_avalon_jtag_slave_read,           //                                .read
@@ -1561,10 +1564,11 @@ module system_mm_interconnect_0 (
 		.uav_lock               (set_s1_agent_m0_lock),                  //                         .lock
 		.uav_debugaccess        (set_s1_agent_m0_debugaccess),           //                         .debugaccess
 		.av_address             (SET_s1_address),                        //      avalon_anti_slave_0.address
+		.av_write               (SET_s1_write),                          //                         .write
 		.av_readdata            (SET_s1_readdata),                       //                         .readdata
-		.av_write               (),                                      //              (terminated)
+		.av_writedata           (SET_s1_writedata),                      //                         .writedata
+		.av_chipselect          (SET_s1_chipselect),                     //                         .chipselect
 		.av_read                (),                                      //              (terminated)
-		.av_writedata           (),                                      //              (terminated)
 		.av_begintransfer       (),                                      //              (terminated)
 		.av_beginbursttransfer  (),                                      //              (terminated)
 		.av_burstcount          (),                                      //              (terminated)
@@ -1573,7 +1577,6 @@ module system_mm_interconnect_0 (
 		.av_waitrequest         (1'b0),                                  //              (terminated)
 		.av_writebyteenable     (),                                      //              (terminated)
 		.av_lock                (),                                      //              (terminated)
-		.av_chipselect          (),                                      //              (terminated)
 		.av_clken               (),                                      //              (terminated)
 		.uav_clken              (1'b0),                                  //              (terminated)
 		.av_debugaccess         (),                                      //              (terminated)

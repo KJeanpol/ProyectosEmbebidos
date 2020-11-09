@@ -12,7 +12,7 @@ module system (
 		input  wire       reset_reset_n, // reset.reset_n
 		output wire [3:0] s_1_export,    //   s_1.export
 		output wire [3:0] s_2_export,    //   s_2.export
-		input  wire [4:0] set_export     //   set.export
+		output wire [4:0] set_export     //   set.export
 	);
 
 	wire  [31:0] cpu_data_master_readdata;                             // mm_interconnect_0:CPU_data_master_readdata -> CPU:d_readdata
@@ -79,8 +79,11 @@ module system (
 	wire   [1:0] mm_interconnect_0_s_2_s1_address;                     // mm_interconnect_0:S_2_s1_address -> S_2:address
 	wire         mm_interconnect_0_s_2_s1_write;                       // mm_interconnect_0:S_2_s1_write -> S_2:write_n
 	wire  [31:0] mm_interconnect_0_s_2_s1_writedata;                   // mm_interconnect_0:S_2_s1_writedata -> S_2:writedata
+	wire         mm_interconnect_0_set_s1_chipselect;                  // mm_interconnect_0:SET_s1_chipselect -> SET:chipselect
 	wire  [31:0] mm_interconnect_0_set_s1_readdata;                    // SET:readdata -> mm_interconnect_0:SET_s1_readdata
 	wire   [1:0] mm_interconnect_0_set_s1_address;                     // mm_interconnect_0:SET_s1_address -> SET:address
+	wire         mm_interconnect_0_set_s1_write;                       // mm_interconnect_0:SET_s1_write -> SET:write_n
+	wire  [31:0] mm_interconnect_0_set_s1_writedata;                   // mm_interconnect_0:SET_s1_writedata -> SET:writedata
 	wire         irq_mapper_receiver0_irq;                             // UART:av_irq -> irq_mapper:receiver0_irq
 	wire  [31:0] cpu_irq_irq;                                          // irq_mapper:sender_irq -> CPU:irq
 	wire         rst_controller_reset_out_reset;                       // rst_controller:reset_out -> [CPU:reset_n, H_1:reset_n, H_2:reset_n, M_1:reset_n, M_2:reset_n, RAM:reset, SET:reset_n, S_1:reset_n, S_2:reset_n, UART:rst_n, irq_mapper:reset, mm_interconnect_0:CPU_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
@@ -174,11 +177,14 @@ module system (
 	);
 
 	system_SET set (
-		.clk      (clk_clk),                           //                 clk.clk
-		.reset_n  (~rst_controller_reset_out_reset),   //               reset.reset_n
-		.address  (mm_interconnect_0_set_s1_address),  //                  s1.address
-		.readdata (mm_interconnect_0_set_s1_readdata), //                    .readdata
-		.in_port  (set_export)                         // external_connection.export
+		.clk        (clk_clk),                             //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),     //               reset.reset_n
+		.address    (mm_interconnect_0_set_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_set_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_set_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_set_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_set_s1_readdata),   //                    .readdata
+		.out_port   (set_export)                           // external_connection.export
 	);
 
 	system_H_1 s_1 (
@@ -277,7 +283,10 @@ module system (
 		.S_2_s1_writedata                      (mm_interconnect_0_s_2_s1_writedata),                   //                                .writedata
 		.S_2_s1_chipselect                     (mm_interconnect_0_s_2_s1_chipselect),                  //                                .chipselect
 		.SET_s1_address                        (mm_interconnect_0_set_s1_address),                     //                          SET_s1.address
+		.SET_s1_write                          (mm_interconnect_0_set_s1_write),                       //                                .write
 		.SET_s1_readdata                       (mm_interconnect_0_set_s1_readdata),                    //                                .readdata
+		.SET_s1_writedata                      (mm_interconnect_0_set_s1_writedata),                   //                                .writedata
+		.SET_s1_chipselect                     (mm_interconnect_0_set_s1_chipselect),                  //                                .chipselect
 		.UART_avalon_jtag_slave_address        (mm_interconnect_0_uart_avalon_jtag_slave_address),     //          UART_avalon_jtag_slave.address
 		.UART_avalon_jtag_slave_write          (mm_interconnect_0_uart_avalon_jtag_slave_write),       //                                .write
 		.UART_avalon_jtag_slave_read           (mm_interconnect_0_uart_avalon_jtag_slave_read),        //                                .read

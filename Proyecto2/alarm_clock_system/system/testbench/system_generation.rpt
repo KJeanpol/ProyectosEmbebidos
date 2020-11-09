@@ -1,6 +1,6 @@
 Info: Starting: Create testbench Platform Designer system
-Info: /home/nachomarin/alarm_clock_system/system/testbench/system.ipx
-Info: qsys-generate /home/nachomarin/alarm_clock_system/system.qsys --testbench=STANDARD --output-directory=/home/nachomarin/alarm_clock_system --family="Cyclone V" --part=5CEBA2F17A7
+Info: C:/Users/Public/alarm_clock_system/system/testbench/system.ipx
+Info: qsys-generate C:\Users\Public\alarm_clock_system\system.qsys --testbench=STANDARD --output-directory=C:\Users\Public\alarm_clock_system --family="Cyclone V" --part=5CEBA2F17A7
 Progress: Loading alarm_clock_system/system.qsys
 Progress: Reading input file
 Progress: Adding CLK [clock_source 20.1]
@@ -29,48 +29,47 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Info: system.SET: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: system.UART: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: qsys-generate succeeded.
 Info: Loading IP catalog for testbench.
 Progress: 
 Progress: 
 Progress: 
-Progress: (2) searching /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
-Info: Reading index /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/root_components.ipx
-Info: /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/root_components.ipx: Loading now from components.ipx
-Info: Reading index /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/ip_component_categories.ipx
-Info: /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/ip_component_categories.ipx described 0 plugins, 0 paths, in 0.01 seconds
-Info: /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.01 seconds
-Info: /home/nachomarin/alarm_clock_system/system/testbench/ip/**/* matched 0 files in 0.00 seconds
-Info: Reading index /home/nachomarin/alarm_clock_system/system/testbench/system.ipx
+Progress: (2) searching C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index C:\intelfpga_lite\20.1\quartus\sopc_builder\bin\root_components.ipx
+Info: C:\intelfpga_lite\20.1\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
+Info: Reading index C:\intelfpga_lite\20.1\quartus\sopc_builder\bin\ip_component_categories.ipx
+Info: C:\intelfpga_lite\20.1\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0.00 seconds
+Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.00 seconds
+Info: C:/Users/Public/alarm_clock_system/system/testbench/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index C:\Users\Public\alarm_clock_system\system\testbench\system.ipx
 Progress: Loading alarm_clock_system/system.qsys
-Info: /home/nachomarin/alarm_clock_system/* matched 7 files in 0.01 seconds
-Info: /home/nachomarin/alarm_clock_system/ip/**/* matched 0 files in 0.00 seconds
-Info: /home/nachomarin/alarm_clock_system/*/* matched 12 files in 0.00 seconds
-Info: /home/nachomarin/alarm_clock_system/system/testbench/system.ipx described 0 plugins, 3 paths, in 0.01 seconds
+Info: C:/Users/Public/alarm_clock_system/* matched 6 files in 0.00 seconds
+Info: C:/Users/Public/alarm_clock_system/ip/**/* matched 0 files in 0.00 seconds
+Info: C:/Users/Public/alarm_clock_system/*/* matched 10 files in 0.00 seconds
+Info: C:\Users\Public\alarm_clock_system\system\testbench\system.ipx described 0 plugins, 3 paths, in 0.01 seconds
 Progress: Loading testbench/system_tb.qsys
-Info: /home/nachomarin/alarm_clock_system/system/testbench/* matched 12 files in 0.01 seconds
-Info: /home/nachomarin/alarm_clock_system/system/testbench/*/* matched 9 files in 0.00 seconds
-Info: /home/nachomarin/.altera.quartus/ip/20.1/**/* matched 0 files in 0.00 seconds
-Info: /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
-Info: /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
-Info: /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
-Info: Reading index /home/nachomarin/intelFPGA_lite/20.1/ip/altera/altera_components.ipx
-Info: /home/nachomarin/intelFPGA_lite/20.1/ip/altera/altera_components.ipx described 1971 plugins, 0 paths, in 0.53 seconds
-Info: /home/nachomarin/intelFPGA_lite/20.1/ip/**/* matched 109 files in 0.53 seconds
-Info: /home/nachomarin/intelFPGA_lite/ip/**/* matched 0 files in 0.00 seconds
-Info: Reading index /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/builtin.ipx
-Info: /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
-Info: /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/**/* matched 9 files in 0.01 seconds
-Info: /home/nachomarin/intelFPGA_lite/20.1/quartus/common/librarian/factories/**/* matched 0 files in 0.00 seconds
-Info: /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
-Info: /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.59 seconds
-Info: /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.59 seconds
+Info: C:/Users/Public/alarm_clock_system/system/testbench/* matched 12 files in 0.01 seconds
+Info: C:/Users/Public/alarm_clock_system/system/testbench/*/* matched 9 files in 0.00 seconds
+Info: C:/Users/Inspiron 14-7460/.altera.quartus/ip/20.1/**/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
+Info: Reading index C:\intelfpga_lite\20.1\ip\altera\altera_components.ipx
+Info: C:\intelfpga_lite\20.1\ip\altera\altera_components.ipx described 1971 plugins, 0 paths, in 0.14 seconds
+Info: C:/intelfpga_lite/20.1/ip/**/* matched 109 files in 0.17 seconds
+Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index C:\intelfpga_lite\20.1\quartus\sopc_builder\builtin.ipx
+Info: C:\intelfpga_lite\20.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
+Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/**/* matched 8 files in 0.01 seconds
+Info: C:/intelfpga_lite/20.1/quartus/common/librarian/factories/**/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
+Info: C:\intelfpga_lite\20.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.20 seconds
+Info: C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.20 seconds
 Progress: 
 Progress: 
 Progress: 
-Info: Running script /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/tbgen.tcl
+Info: Running script C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/tbgen.tcl
 Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
 Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
 Info: get_module_property NAME
@@ -309,7 +308,7 @@ Info: set_instance_parameter_value system_inst_set_bfm CLOCKED_SIGNAL 0
 Info: set_instance_parameter_value system_inst_set_bfm ENABLE_RESET 0
 Info: set_instance_parameter_value system_inst_set_bfm SIGNAL_ROLES export
 Info: set_instance_parameter_value system_inst_set_bfm SIGNAL_WIDTHS 5
-Info: set_instance_parameter_value system_inst_set_bfm SIGNAL_DIRECTIONS output
+Info: set_instance_parameter_value system_inst_set_bfm SIGNAL_DIRECTIONS input
 Info: get_instance_property system_inst_set_bfm CLASS_NAME
 Info: get_instance_interface_property system_inst set CLASS_NAME
 Info: get_instance_interfaces system_inst_set_bfm
@@ -320,9 +319,9 @@ Info: TB_Gen: Saving testbench system: system_tb.qsys
 Info: save_system system_tb.qsys
 Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
 Info: TB_Gen: TBGEN SUCCESSFUL
-Info: Testbench system: /home/nachomarin/alarm_clock_system/system/testbench/system_tb.qsys
+Info: Testbench system: C:/Users/Public/alarm_clock_system/system/testbench/system_tb.qsys
 Info: Done
-Info: qsys-generate /home/nachomarin/alarm_clock_system/system.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=/home/nachomarin/alarm_clock_system/system/testbench/system_tb/simulation --family="Cyclone V" --part=5CEBA2F17A7
+Info: qsys-generate C:\Users\Public\alarm_clock_system\system.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=C:\Users\Public\alarm_clock_system\system\testbench\system_tb\simulation --family="Cyclone V" --part=5CEBA2F17A7
 Progress: Loading testbench/system_tb.qsys
 Progress: Reading input file
 Progress: Adding system_inst [system 1.0]
@@ -349,7 +348,6 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Info: system_tb.system_inst.SET: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: system_tb.system_inst.UART: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: system_tb.system_inst_clk_bfm: Elaborate: altera_clock_source
 Info: system_tb.system_inst_clk_bfm:            $Revision: #1 $
@@ -362,26 +360,26 @@ Info: system_tb: Generating system_tb "system_tb" for SIM_VERILOG
 Info: system_inst: "system_tb" instantiated system "system_inst"
 Info: system_inst_clk_bfm: "system_tb" instantiated altera_avalon_clock_source "system_inst_clk_bfm"
 Info: system_inst_h_1_bfm: "system_tb" instantiated altera_conduit_bfm "system_inst_h_1_bfm"
-Info: Reusing file /home/nachomarin/alarm_clock_system/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file C:/Users/Public/alarm_clock_system/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
 Info: system_inst_reset_bfm: "system_tb" instantiated altera_avalon_reset_source "system_inst_reset_bfm"
-Info: Reusing file /home/nachomarin/alarm_clock_system/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file C:/Users/Public/alarm_clock_system/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
 Info: system_inst_set_bfm: "system_tb" instantiated altera_conduit_bfm "system_inst_set_bfm"
-Info: Reusing file /home/nachomarin/alarm_clock_system/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
+Info: Reusing file C:/Users/Public/alarm_clock_system/system/testbench/system_tb/simulation/submodules/verbosity_pkg.sv
 Info: CPU: "system_inst" instantiated altera_nios2_gen2 "CPU"
 Info: H_1: Starting RTL generation for module 'system_H_1'
-Info: H_1:   Generation command is [exec /home/nachomarin/intelFPGA_lite/20.1/quartus/linux64/perl/bin/perl -I /home/nachomarin/intelFPGA_lite/20.1/quartus/linux64/perl/lib -I /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/europa -I /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin -I /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_H_1 --dir=/tmp/alt8571_1776269869560756202.dir/0006_H_1_gen/ --quartus_dir=/home/nachomarin/intelFPGA_lite/20.1/quartus --verilog --config=/tmp/alt8571_1776269869560756202.dir/0006_H_1_gen//system_H_1_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8571_1776269869560756202.dir/0006_H_1_gen/  ]
+Info: H_1:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_H_1 --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0030_H_1_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0030_H_1_gen//system_H_1_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0030_H_1_gen/  ]
 Info: H_1: Done RTL generation for module 'system_H_1'
 Info: H_1: "system_inst" instantiated altera_avalon_pio "H_1"
 Info: RAM: Starting RTL generation for module 'system_RAM'
-Info: RAM:   Generation command is [exec /home/nachomarin/intelFPGA_lite/20.1/quartus/linux64/perl/bin/perl -I /home/nachomarin/intelFPGA_lite/20.1/quartus/linux64/perl/lib -I /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/europa -I /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin -I /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_RAM --dir=/tmp/alt8571_1776269869560756202.dir/0007_RAM_gen/ --quartus_dir=/home/nachomarin/intelFPGA_lite/20.1/quartus --verilog --config=/tmp/alt8571_1776269869560756202.dir/0007_RAM_gen//system_RAM_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8571_1776269869560756202.dir/0007_RAM_gen/  ]
+Info: RAM:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_RAM --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0031_RAM_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0031_RAM_gen//system_RAM_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0031_RAM_gen/  ]
 Info: RAM: Done RTL generation for module 'system_RAM'
 Info: RAM: "system_inst" instantiated altera_avalon_onchip_memory2 "RAM"
 Info: SET: Starting RTL generation for module 'system_SET'
-Info: SET:   Generation command is [exec /home/nachomarin/intelFPGA_lite/20.1/quartus/linux64/perl/bin/perl -I /home/nachomarin/intelFPGA_lite/20.1/quartus/linux64/perl/lib -I /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/europa -I /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin -I /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_SET --dir=/tmp/alt8571_1776269869560756202.dir/0008_SET_gen/ --quartus_dir=/home/nachomarin/intelFPGA_lite/20.1/quartus --verilog --config=/tmp/alt8571_1776269869560756202.dir/0008_SET_gen//system_SET_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8571_1776269869560756202.dir/0008_SET_gen/  ]
+Info: SET:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_SET --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0032_SET_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0032_SET_gen//system_SET_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0032_SET_gen/  ]
 Info: SET: Done RTL generation for module 'system_SET'
 Info: SET: "system_inst" instantiated altera_avalon_pio "SET"
 Info: UART: Starting RTL generation for module 'system_UART'
-Info: UART:   Generation command is [exec /home/nachomarin/intelFPGA_lite/20.1/quartus/linux64/perl/bin/perl -I /home/nachomarin/intelFPGA_lite/20.1/quartus/linux64/perl/lib -I /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/europa -I /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin -I /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_UART --dir=/tmp/alt8571_1776269869560756202.dir/0009_UART_gen/ --quartus_dir=/home/nachomarin/intelFPGA_lite/20.1/quartus --verilog --config=/tmp/alt8571_1776269869560756202.dir/0009_UART_gen//system_UART_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8571_1776269869560756202.dir/0009_UART_gen/  ]
+Info: UART:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_UART --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0033_UART_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0033_UART_gen//system_UART_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0033_UART_gen/  ]
 Info: UART: Done RTL generation for module 'system_UART'
 Info: UART: "system_inst" instantiated altera_avalon_jtag_uart "UART"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -398,14 +396,14 @@ Info: mm_interconnect_0: "system_inst" instantiated altera_mm_interconnect "mm_i
 Info: irq_mapper: "system_inst" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "system_inst" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'system_CPU_cpu'
-Info: cpu:   Generation command is [exec /home/nachomarin/intelFPGA_lite/20.1/quartus/linux64//perl/bin/perl -I /home/nachomarin/intelFPGA_lite/20.1/quartus/linux64//perl/lib -I /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin/europa -I /home/nachomarin/intelFPGA_lite/20.1/quartus/sopc_builder/bin -I /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/nachomarin/intelFPGA_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=system_CPU_cpu --dir=/tmp/alt8571_1776269869560756202.dir/0012_cpu_gen/ --quartus_bindir=/home/nachomarin/intelFPGA_lite/20.1/quartus/linux64/ --verilog --config=/tmp/alt8571_1776269869560756202.dir/0012_cpu_gen//system_CPU_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8571_1776269869560756202.dir/0012_cpu_gen/  ]
-Info: cpu: # 2020.11.05 17:23:36 (*) Starting Nios II generation
-Info: cpu: # 2020.11.05 17:23:36 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2020.11.05 17:23:36 (*)   Creating all objects for CPU
-Info: cpu: # 2020.11.05 17:23:37 (*)   Creating '/tmp/alt8571_1776269869560756202.dir/0012_cpu_gen//system_CPU_cpu_nios2_waves.do'
-Info: cpu: # 2020.11.05 17:23:37 (*)   Generating RTL from CPU objects
-Info: cpu: # 2020.11.05 17:23:37 (*)   Creating plain-text RTL
-Info: cpu: # 2020.11.05 17:23:38 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=system_CPU_cpu --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0036_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/20.1/quartus/bin64/ --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0036_cpu_gen//system_CPU_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0036_cpu_gen/  ]
+Info: cpu: # 2020.11.04 13:15:49 (*) Starting Nios II generation
+Info: cpu: # 2020.11.04 13:15:49 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2020.11.04 13:15:49 (*)   Creating all objects for CPU
+Info: cpu: # 2020.11.04 13:15:50 (*)   Creating 'C:/Users/INSPIR~1/AppData/Local/Temp/alt8570_3644072231142546405.dir/0036_cpu_gen//system_CPU_cpu_nios2_waves.do'
+Info: cpu: # 2020.11.04 13:15:50 (*)   Generating RTL from CPU objects
+Info: cpu: # 2020.11.04 13:15:50 (*)   Creating plain-text RTL
+Info: cpu: # 2020.11.04 13:15:51 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'system_CPU_cpu'
 Info: cpu: "CPU" instantiated altera_nios2_gen2_unit "cpu"
 Info: CPU_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "CPU_data_master_translator"
@@ -419,27 +417,27 @@ Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "c
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/nachomarin/alarm_clock_system/system/testbench/system_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/Public/alarm_clock_system/system/testbench/system_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: system_tb: Done "system_tb" with 28 modules, 49 files
 Info: qsys-generate succeeded.
-Info: sim-script-gen --spd=/home/nachomarin/alarm_clock_system/system_tb.spd --output-directory=/home/nachomarin/alarm_clock_system/system/testbench/ --use-relative-paths=true
-Info: Doing: ip-make-simscript --spd=/home/nachomarin/alarm_clock_system/system_tb.spd --output-directory=/home/nachomarin/alarm_clock_system/system/testbench/ --use-relative-paths=true
-Info: Generating the following file(s) for MODELSIM simulator in /home/nachomarin/alarm_clock_system/system/testbench/ directory:
+Info: sim-script-gen --spd=C:\Users\Public\alarm_clock_system\system_tb.spd --output-directory=C:/Users/Public/alarm_clock_system/system/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\Public\alarm_clock_system\system_tb.spd --output-directory=C:/Users/Public/alarm_clock_system/system/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/Public/alarm_clock_system/system/testbench/ directory:
 Info: 	mentor/msim_setup.tcl
-Info: Generating the following file(s) for VCS simulator in /home/nachomarin/alarm_clock_system/system/testbench/ directory:
+Info: Generating the following file(s) for VCS simulator in C:/Users/Public/alarm_clock_system/system/testbench/ directory:
 Info: 	synopsys/vcs/vcs_setup.sh
-Info: Generating the following file(s) for VCSMX simulator in /home/nachomarin/alarm_clock_system/system/testbench/ directory:
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/Public/alarm_clock_system/system/testbench/ directory:
 Info: 	synopsys/vcsmx/synopsys_sim.setup
 Info: 	synopsys/vcsmx/vcsmx_setup.sh
-Info: Generating the following file(s) for NCSIM simulator in /home/nachomarin/alarm_clock_system/system/testbench/ directory:
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/Public/alarm_clock_system/system/testbench/ directory:
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
 Info: 	28 .cds.lib files in cadence/cds_libs/ directory
-Info: Generating the following file(s) for RIVIERA simulator in /home/nachomarin/alarm_clock_system/system/testbench/ directory:
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/Public/alarm_clock_system/system/testbench/ directory:
 Info: 	aldec/rivierapro_setup.tcl
-Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/nachomarin/alarm_clock_system/system/testbench/.
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/Public/alarm_clock_system/system/testbench/.
 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
 Info: Finished: Create testbench Platform Designer system

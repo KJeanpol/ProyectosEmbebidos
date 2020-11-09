@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 20.1 711 linux 2020.11.05.17:23:41
+# ACDS 20.1 711 win32 2020.11.04.13:15:53
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,12 +94,12 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 20.1 711 linux 2020.11.05.17:23:41
+# ACDS 20.1 711 win32 2020.11.04.13:15:53
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="system_tb"
 QSYS_SIMDIR="./../../"
-QUARTUS_INSTALL_DIR="/home/nachomarin/intelFPGA_lite/20.1/quartus/"
+QUARTUS_INSTALL_DIR="C:/intelfpga_lite/20.1/quartus/"
 SKIP_FILE_COPY=0
 SKIP_SIM=0
 USER_DEFINED_ELAB_OPTIONS=""
@@ -131,14 +131,14 @@ fi
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
   cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.dat ./
-  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.mif ./
+  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.hex ./
   cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.mif ./
-  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.mif ./
+  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.dat ./
   cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.hex ./
+  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.mif ./
   cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.dat ./
   cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.hex ./
-  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_ociram_default_contents.hex ./
-  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_a.dat ./
+  cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_rf_ram_b.mif ./
   cp -f $QSYS_SIMDIR/system_tb/simulation/submodules/system_RAM.hex ./
 fi
 
@@ -171,11 +171,11 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/system_tb/simulation/submodules/altera_merlin_master_agent.sv \
   $QSYS_SIMDIR/system_tb/simulation/submodules/altera_merlin_slave_translator.sv \
   $QSYS_SIMDIR/system_tb/simulation/submodules/altera_merlin_master_translator.sv \
-  $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_sysclk.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu.v \
+  $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_sysclk.v \
+  $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_tck.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_wrapper.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_test_bench.v \
-  $QSYS_SIMDIR/system_tb/simulation/submodules/system_CPU_cpu_debug_slave_tck.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/altera_reset_controller.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/altera_reset_synchronizer.v \
   $QSYS_SIMDIR/system_tb/simulation/submodules/system_irq_mapper.sv \
