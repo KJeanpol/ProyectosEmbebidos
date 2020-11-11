@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/santi/Projects/EMBEBIDOS/ProyectosEmbebidos-main/Proyecto2/alarm_clock_system/software/CLOCK2020/obj/default/runtime/sim/mentor
+vsystem_TIMER
+!s110 1605047084
+!i10b 1
+!s100 kaCcFC8gQRlJg@_?fd]Ab1
+IHaHmfG6`8X6hANI[81mgV1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1605045877
+8F:/santi/Projects/EMBEBIDOS/workspace/testbench/system_tb/simulation/submodules/system_TIMER.v
+FF:/santi/Projects/EMBEBIDOS/workspace/testbench/system_tb/simulation/submodules/system_TIMER.v
+L0 21
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1605047084.000000
+!s107 F:/santi/Projects/EMBEBIDOS/workspace/testbench/system_tb/simulation/submodules/system_TIMER.v|
+!s90 -reportprogress|300|F:/santi/Projects/EMBEBIDOS/workspace/testbench/system_tb/simulation/submodules/system_TIMER.v|-work|TIMER|
+!i113 1
+o-work TIMER
+tCvgOpt 0
+nsystem_@t@i@m@e@r

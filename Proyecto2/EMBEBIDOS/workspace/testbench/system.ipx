@@ -1,0 +1,12 @@
+<library>
+	<!-- Include the system-under-test, and project-local components. -->
+	<path path="F:/santi/Projects/EMBEBIDOS/ProyectosEmbebidos-main/Proyecto2/alarm_clock_system//*" >
+		<tag2 key="COMPONENT_IN_PROJECT" value="true" />
+	</path>
+	<path path="F:/santi/Projects/EMBEBIDOS/ProyectosEmbebidos-main/Proyecto2/alarm_clock_system//ip/**/*" >
+		<tag2 key="COMPONENT_IN_PROJECT" value="true" />
+	</path>
+	<path path="F:/santi/Projects/EMBEBIDOS/ProyectosEmbebidos-main/Proyecto2/alarm_clock_system//*/*" >
+		<tag2 key="COMPONENT_IN_PROJECT" value="true" />
+	</path>
+</library>

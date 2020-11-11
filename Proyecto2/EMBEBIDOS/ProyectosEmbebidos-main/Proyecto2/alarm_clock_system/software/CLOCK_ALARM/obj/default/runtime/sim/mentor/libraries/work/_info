@@ -1,0 +1,30 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/santi/Projects/EMBEBIDOS/ProyectosEmbebidos-main/Proyecto2/alarm_clock_system/software/CLOCK_ALARM/obj/default/runtime/sim/mentor
+vsystem_tb
+!s110 1605050754
+!i10b 1
+!s100 `IWY?2kb0Lme0UXAPa2IA2
+IWn;7inEd]ODF8[UmEh74d2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1605047679
+8F:/santi/Projects/EMBEBIDOS/workspace/testbench/system_tb/simulation/system_tb.v
+FF:/santi/Projects/EMBEBIDOS/workspace/testbench/system_tb/simulation/system_tb.v
+L0 6
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1605050754.000000
+!s107 F:/santi/Projects/EMBEBIDOS/workspace/testbench/system_tb/simulation/system_tb.v|
+!s90 -reportprogress|300|F:/santi/Projects/EMBEBIDOS/workspace/testbench/system_tb/simulation/system_tb.v|
+!i113 1
+tCvgOpt 0

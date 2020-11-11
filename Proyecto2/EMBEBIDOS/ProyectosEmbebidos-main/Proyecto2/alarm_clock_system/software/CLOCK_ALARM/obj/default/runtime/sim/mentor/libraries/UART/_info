@@ -1,0 +1,120 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/santi/Projects/EMBEBIDOS/ProyectosEmbebidos-main/Proyecto2/alarm_clock_system/software/CLOCK_ALARM/obj/default/runtime/sim/mentor
+vsystem_UART
+!s110 1605050751
+!i10b 1
+!s100 AIAJBoEEnS<ETG0<m77ZR1
+IbIJ[5mFN_SM]>>[nI>87J3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z2 w1605047707
+Z3 8F:/santi/Projects/EMBEBIDOS/workspace/testbench/system_tb/simulation/submodules/system_UART.v
+Z4 FF:/santi/Projects/EMBEBIDOS/workspace/testbench/system_tb/simulation/submodules/system_UART.v
+L0 331
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1605050750.000000
+Z7 !s107 F:/santi/Projects/EMBEBIDOS/workspace/testbench/system_tb/simulation/submodules/system_UART.v|
+Z8 !s90 -reportprogress|300|F:/santi/Projects/EMBEBIDOS/workspace/testbench/system_tb/simulation/submodules/system_UART.v|-work|UART|
+!i113 1
+Z9 o-work UART
+Z10 tCvgOpt 0
+nsystem_@u@a@r@t
+vsystem_UART_scfifo_r
+Z11 !s110 1605050750
+!i10b 1
+!s100 iQg_dcl6?RUfac4ORV1Zh2
+IS>`<YOnhneXkgC9R5?GLo2
+R1
+R0
+R2
+R3
+R4
+L0 243
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+R10
+nsystem_@u@a@r@t_scfifo_r
+vsystem_UART_scfifo_w
+R11
+!i10b 1
+!s100 ?n<XTU=cN9TLDkaA=DNfJ1
+IM_Va>Hn2L1S8e2>`cOoIB0
+R1
+R0
+R2
+R3
+R4
+L0 78
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+R10
+nsystem_@u@a@r@t_scfifo_w
+vsystem_UART_sim_scfifo_r
+R11
+!i10b 1
+!s100 PC2=MI8A^J==BS:7bS7Xa0
+IjC9QM;^CDz[M[k`RGhj3C2
+R1
+R0
+R2
+R3
+R4
+L0 164
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+R10
+nsystem_@u@a@r@t_sim_scfifo_r
+vsystem_UART_sim_scfifo_w
+R11
+!i10b 1
+!s100 YPhKn>DQNaCCOOWFbG1nW3
+In3hh^_M22C0HjYW:@D2g83
+R1
+R0
+R2
+R3
+R4
+L0 21
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 1
+R9
+R10
+nsystem_@u@a@r@t_sim_scfifo_w

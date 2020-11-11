@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "smarthome-d1c82": {
+      "hosting": {
+        "SmartDevice": [
+          "smarthome-d1c82"
+        ]
+      }
+    }
+  }
+}
