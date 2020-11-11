@@ -1,0 +1,125 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\Public\alarm_clock_system\system.qsys --block-symbol-file --output-directory=C:\Users\Public\alarm_clock_system\system --family="Cyclone V" --part=5CEBA2F17A7
+Progress: Loading alarm_clock_system/system.qsys
+Progress: Reading input file
+Progress: Adding CLK [clock_source 20.1]
+Progress: Parameterizing module CLK
+Progress: Adding CPU [altera_nios2_gen2 20.1]
+Progress: Parameterizing module CPU
+Progress: Adding H_1 [altera_avalon_pio 20.1]
+Progress: Parameterizing module H_1
+Progress: Adding H_2 [altera_avalon_pio 20.1]
+Progress: Parameterizing module H_2
+Progress: Adding M_1 [altera_avalon_pio 20.1]
+Progress: Parameterizing module M_1
+Progress: Adding M_2 [altera_avalon_pio 20.1]
+Progress: Parameterizing module M_2
+Progress: Adding RAM [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module RAM
+Progress: Adding SET [altera_avalon_pio 20.1]
+Progress: Parameterizing module SET
+Progress: Adding S_1 [altera_avalon_pio 20.1]
+Progress: Parameterizing module S_1
+Progress: Adding S_2 [altera_avalon_pio 20.1]
+Progress: Parameterizing module S_2
+Progress: Adding UART [altera_avalon_jtag_uart 20.1]
+Progress: Parameterizing module UART
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: system.SET: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: system.UART: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\Public\alarm_clock_system\system.qsys --synthesis=VERILOG --output-directory=C:\Users\Public\alarm_clock_system\system\synthesis --family="Cyclone V" --part=5CEBA2F17A7
+Progress: Loading alarm_clock_system/system.qsys
+Progress: Reading input file
+Progress: Adding CLK [clock_source 20.1]
+Progress: Parameterizing module CLK
+Progress: Adding CPU [altera_nios2_gen2 20.1]
+Progress: Parameterizing module CPU
+Progress: Adding H_1 [altera_avalon_pio 20.1]
+Progress: Parameterizing module H_1
+Progress: Adding H_2 [altera_avalon_pio 20.1]
+Progress: Parameterizing module H_2
+Progress: Adding M_1 [altera_avalon_pio 20.1]
+Progress: Parameterizing module M_1
+Progress: Adding M_2 [altera_avalon_pio 20.1]
+Progress: Parameterizing module M_2
+Progress: Adding RAM [altera_avalon_onchip_memory2 20.1]
+Progress: Parameterizing module RAM
+Progress: Adding SET [altera_avalon_pio 20.1]
+Progress: Parameterizing module SET
+Progress: Adding S_1 [altera_avalon_pio 20.1]
+Progress: Parameterizing module S_1
+Progress: Adding S_2 [altera_avalon_pio 20.1]
+Progress: Parameterizing module S_2
+Progress: Adding UART [altera_avalon_jtag_uart 20.1]
+Progress: Parameterizing module UART
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: system.SET: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: system.UART: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: system: Generating system "system" for QUARTUS_SYNTH
+Info: CPU: "system" instantiated altera_nios2_gen2 "CPU"
+Info: H_1: Starting RTL generation for module 'system_H_1'
+Info: H_1:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_H_1 --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8575_5581343816207040003.dir/0002_H_1_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8575_5581343816207040003.dir/0002_H_1_gen//system_H_1_component_configuration.pl  --do_build_sim=0  ]
+Info: H_1: Done RTL generation for module 'system_H_1'
+Info: H_1: "system" instantiated altera_avalon_pio "H_1"
+Info: RAM: Starting RTL generation for module 'system_RAM'
+Info: RAM:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_RAM --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8575_5581343816207040003.dir/0003_RAM_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8575_5581343816207040003.dir/0003_RAM_gen//system_RAM_component_configuration.pl  --do_build_sim=0  ]
+Info: RAM: Done RTL generation for module 'system_RAM'
+Info: RAM: "system" instantiated altera_avalon_onchip_memory2 "RAM"
+Info: SET: Starting RTL generation for module 'system_SET'
+Info: SET:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=system_SET --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8575_5581343816207040003.dir/0004_SET_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8575_5581343816207040003.dir/0004_SET_gen//system_SET_component_configuration.pl  --do_build_sim=0  ]
+Info: SET: Done RTL generation for module 'system_SET'
+Info: SET: "system" instantiated altera_avalon_pio "SET"
+Info: UART: Starting RTL generation for module 'system_UART'
+Info: UART:   Generation command is [exec C:/intelfpga_lite/20.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/20.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/20.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_UART --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8575_5581343816207040003.dir/0005_UART_gen/ --quartus_dir=C:/intelfpga_lite/20.1/quartus --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8575_5581343816207040003.dir/0005_UART_gen//system_UART_component_configuration.pl  --do_build_sim=0  ]
+Info: UART: Done RTL generation for module 'system_UART'
+Info: UART: "system" instantiated altera_avalon_jtag_uart "UART"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "system" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "system" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'system_CPU_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/20.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/20.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/20.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/20.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=system_CPU_cpu --dir=C:/Users/INSPIR~1/AppData/Local/Temp/alt8575_5581343816207040003.dir/0008_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/20.1/quartus/bin64/ --verilog --config=C:/Users/INSPIR~1/AppData/Local/Temp/alt8575_5581343816207040003.dir/0008_cpu_gen//system_CPU_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2020.11.09 11:41:57 (*) Starting Nios II generation
+Info: cpu: # 2020.11.09 11:41:57 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2020.11.09 11:41:57 (*)   Creating all objects for CPU
+Info: cpu: # 2020.11.09 11:41:58 (*)   Generating RTL from CPU objects
+Info: cpu: # 2020.11.09 11:41:58 (*)   Creating plain-text RTL
+Info: cpu: # 2020.11.09 11:41:58 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'system_CPU_cpu'
+Info: cpu: "CPU" instantiated altera_nios2_gen2_unit "cpu"
+Info: CPU_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "CPU_data_master_translator"
+Info: UART_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "UART_avalon_jtag_slave_translator"
+Info: CPU_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "CPU_data_master_agent"
+Info: UART_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "UART_avalon_jtag_slave_agent"
+Info: UART_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "UART_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/Public/alarm_clock_system/system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: system: Done "system" with 23 modules, 36 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
