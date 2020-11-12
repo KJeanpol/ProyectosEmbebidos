@@ -3,10 +3,11 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="143" />
+   <connections preferredWidth="159" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
- <window width="1936" height="1056" x="-8" y="-8" />
+ <library expandedCategories="Project,Library" />
+ <window width="1376" height="754" x="1358" y="-8" />
+ <generation path="F:/santi/Projects/EMBEBIDOS/workspace3/" />
 </preferences>
